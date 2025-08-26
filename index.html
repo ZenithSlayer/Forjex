@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forjex</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="sec1">
+        <div class="char">
+            <div class="charface">
+                <img src="img/tempimg.jpg" alt="">
+                <p>Name</p>
+            </div>
+            <div class="charinfo">
+                <div class="classlv">
+                    <div class="stat">
+                        <p>Class</p>
+                        <select name="class" id=""></select>
+                    </div>
+                    <div class="stat">
+                        <p>Level</p>
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="charstat">
+                    <p>Background</p>
+                    <select name="class" id=""></select>
+                </div>
+                <div class="charstat">
+                    <p>Alignment</p>
+                    <select name="class" id=""></select>
+                </div>
+            </div>
+        </div>
+        <div class="pw">
+            <p>10</p>
+            <p>Passive wisdom</p>
+        </div>
+        <div class="coins">
+            <div class="coincount">
+                <div class="coin">
+                    <p>134</p>
+                    <p>CP</p>
+                </div>
+                <div class="coin">
+                    <p>114</p>
+                    <p>SP</p>
+                </div>
+                <div class="coin">
+                    <p>123</p>
+                    <p>GP</p>
+                </div>
+                <div class="coin">
+                    <p>1030</p>
+                    <p>PP</p>
+                </div>
+            </div>
+        </div>
+        <div class="profs">
+            <p class="title">Proficiencies</p>
+            <div class="options">
+                <p onclick="showprof('armor')">Armor</p>
+                <p onclick="showprof('tool')">Tools</p>
+                <p onclick="showprof('language')">Languages</p>
+            </div>
+            <div class="proflist" id="armor" style="display: none;">
+                <p>armor 1</p>
+                <p>armor 2</p>
+                <p>armor 3</p>
+            </div>
+            <div class="proflist" id="tool" style="display: none;">
+                <p>tool 1</p>
+                <p>tool 2</p>
+                <p>tool 3</p>
+            </div>
+            <div class="proflist" id="language" style="display: none;">
+                <p>language 1</p>
+                <p>language 2</p>
+                <p>language 3</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    function showprof(toshow) {
+        document.getElementById('armor').style.display = 'none';
+        document.getElementById('tool').style.display = 'none';
+        document.getElementById('language').style.display = 'none';
+
+        document.getElementById(toshow).style.display = 'flex';
+    }
+</script>
+
+</html>
