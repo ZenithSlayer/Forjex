@@ -19,7 +19,7 @@
                 <div class="classlv">
                     <div class="stat">
                         <p>Class</p>
-                        <select name="class" id=""></select>
+                        <select name="class" id="class"></select>
                     </div>
                     <div class="stat">
                         <p>Level</p>
@@ -27,12 +27,16 @@
                     </div>
                 </div>
                 <div class="charstat">
+                    <p>Race</p>
+                    <select name="class" id="race"></select>
+                </div>
+                <div class="charstat">
                     <p>Background</p>
-                    <select name="class" id=""></select>
+                    <select name="class" id="bg"></select>
                 </div>
                 <div class="charstat">
                     <p>Alignment</p>
-                    <select name="class" id=""></select>
+                    <select name="class" id="al"></select>
                 </div>
             </div>
         </div>
@@ -94,6 +98,31 @@
 
         document.getElementById(toshow).style.display = 'flex';
     }
+
+    function populateDropdown(selectId, jsonFile, placeholderText) {
+        const dropdown = document.getElementById(selectId);
+
+        dropdown.innerHTML = `<option value="" selected hidden>${placeholderText}</option>`;
+
+        fetch(jsonFile)
+            .then(response => response.json())
+            .then(data => {
+                data.options.forEach(item => {
+                    const option = document.createElement("option");
+                    option.value = item.id;
+                    option.textContent = item.name;
+                    dropdown.appendChild(option);
+                });
+            })
+            .catch(error => {
+                console.error(`Error loading ${jsonFile}:`, error);
+            });
+    }
+
+    populateDropdown("class", "json/class.json", "Select a class");
+    populateDropdown("race", "json/race.json", "Select a race");
+    populateDropdown("bg", "json/bg.json", "Select a background");
+    populateDropdown("al", "json/al.json", "Select a Alingment");
 </script>
 
 </html>

@@ -1,0 +1,9 @@
+{
+  "options": [
+    {"name": "Human" },
+    {"name": "Orc" },
+    {"name": "Half-Orc" },
+    {"name": "Elf" },
+    {"name": "Half-Elf" }
+  ]
+}

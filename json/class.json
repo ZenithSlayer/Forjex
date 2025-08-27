@@ -1,0 +1,11 @@
+{
+  "options": [
+    {"name": "Rogue" },
+    {"name": "Paladin" },
+    {"name": "Clearic" },
+    {"name": "Warlock" },
+    {"name": "Druid" },
+    {"name": "Fighter" },
+    {"name": "Artificer" }
+  ]
+}
