@@ -13,15 +13,26 @@
     <?php include "includes/header.php" ?>
 
     <main>
-        <?php
 
-        $page = $_GET['page'] ?? 'home';
-        if (file_exists($page)) {
-            include $page;
-        } else {
-            include "pages/error.php";
-        }
-        ?>
+        <?php
+    // Default page
+    $page = 'home';
+
+    // Check if a page is requested
+    if (isset($_GET['page'])) {
+        $page = $_GET['page'];
+    }
+
+    // Whitelist pages for security
+    $allowed_pages = ['home', 'about', 'contact'];
+
+    if (!in_array($page, $allowed_pages)) {
+        $page = 'home';
+    }
+
+    // Include the correct page content
+    include "includes/pages/" . $page . ".php";
+    ?>
 
     </main>
 
