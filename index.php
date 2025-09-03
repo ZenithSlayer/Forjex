@@ -24,10 +24,10 @@
     }
 
     // Whitelist pages for security
-    $allowed_pages = ['home', 'about', 'contact'];
+    $allowed_pages = ['home', 'about', 'contact', 'error'];
 
     if (!in_array($page, $allowed_pages)) {
-        $page = 'home';
+        $page = 'error';
     }
 
     // Include the correct page content
