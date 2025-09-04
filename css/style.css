@@ -46,14 +46,10 @@ nav a:hover, nav a:active {
 
 /* Header */
 
-header {
-    padding: 40px 20px;
-    background-color: #f4f4f4;
-}
-header h1 {}
-header .subtitle {
-    margin: 20px 0 0 0;
-    line-height: 28px;
+header img{
+    width: 100vw;
+    max-height: 200px;
+    object-fit: cover;
 }
 
 /* Footer */
@@ -63,4 +59,44 @@ footer {
     padding: 20px;
     width: 100%;
     color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+footer h1 {
+    width: fit-content;
+}
+
+footer div {
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+footer div img {
+    width: 50px;
+    aspect-ratio: 1;
+    transition: scale 0.3s;
+}
+
+footer div img:hover {
+    scale: 1.3;
+}
+
+footer a {
+    display: flex;
+    flex-direction: row-reverse;
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    padding: 10px;
+    align-self: center;
+    transition: scale 0.3s;
+}
+
+footer p:hover {
+    scale: 1.3;
 }

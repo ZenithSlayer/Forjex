@@ -15,25 +15,25 @@
     <main>
 
         <?php
-    // Default page
-    $page = 'home';
+        // Default page
+        $page = 'home';
 
-    // Check if a page is requested
-    if (isset($_GET['page'])) {
-        $page = $_GET['page'];
-    }
+        // Check if a page is requested
+        if (isset($_GET['page'])) {
+            $page = $_GET['page'];
+        }
 
-    // Whitelist pages for security
-    $allowed_pages = ['home', 'about', 'contact', 'error'];
+        // Whitelist pages for security
+        $allowed_pages = ['home', 'about', 'contact', 'error'];
 
-    if (!in_array($page, $allowed_pages)) {
-        $page = 'error';
-    }
+        if (!in_array($page, $allowed_pages)) {
+            $page = 'error';
+        }
 
-    // Include the correct page content
-    include "includes/pages/" . $page . ".php";
-    ?>
-
+        // Include the correct page content
+        include "includes/pages/" . $page . ".php";
+        echo ($page)
+            ?>
     </main>
 
     <?php include "includes/footer.php" ?>
