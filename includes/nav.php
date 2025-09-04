@@ -1,7 +1,9 @@
 <nav>
     <div class="logo">
-        <img src="imgs/Forjex-logo.png" alt="">
-        <p>Forjex</p>
+        <a  href="?page=home">
+            <img src="imgs/Forjex-logo.png" alt="">
+            <p>Forjex</p>
+        </a>
     </div>
     <div class="links">
         <a data-active="index" href="?page=home">Home</a>
