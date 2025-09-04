@@ -1,8 +1,10 @@
 <?php
-$page = isset($_GET['page']) ? $_GET['page'] : 'default';
+$page = $_GET['page'];
+if (is_null($page)) {
+    $page = 'home';}
 ?>
 
 <header>
-    <img src="imgs/banner-<?php echo htmlspecialchars($page); ?>.jpg" alt="">
+    <img src="imgs/banner-<?php echo($page); ?>.jpg" alt="">
 </header>
     
