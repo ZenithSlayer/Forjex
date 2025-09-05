@@ -10,7 +10,7 @@
         <a data-active="about" href="?page=about">About</a>
         <a data-active="contact" href="?page=contact">Contact</a>
     </div>
-    <div class="login">
+    <div class="loginnav">
         <a data-active="login" href="?page=login&state=login">Login</a>
         <a data-active="register" href="?page=login&state=register">Register</a>
     </div>

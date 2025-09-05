@@ -25,7 +25,7 @@
         }
 
         // Whitelist pages for security
-        $allowed_pages = ['home', 'about', 'contact', 'error'];
+        $allowed_pages = ['home', 'about', 'contact', 'login', 'error'];
 
         if (!in_array($page, $allowed_pages)) {
             $page = 'error';
@@ -33,7 +33,6 @@
 
         // Include the correct page content
         include "includes/pages/" . $page . ".php";
-        echo ($page)
             ?>
     </main>
 
