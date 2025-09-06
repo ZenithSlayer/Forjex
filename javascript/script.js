@@ -1,4 +1,4 @@
-const fs = require('fs'); // Import the file system module
+const fs = require('fs');
 
 const data = {
     Name: 'jon',
@@ -30,8 +30,7 @@ const data = {
 
 };
 
-// Convert the JavaScript object to a JSON string
-const jsonData = JSON.stringify(data, null, 2); // 'null' and '2' for pretty-printing
+const jsonData = JSON.stringify(data, null, 2);
 
 fs.writeFile('output.json', jsonData, 'utf8', (err) => {
     if (err) {
