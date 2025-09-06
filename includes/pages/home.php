@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <div class="home">
     <div class="homelogo">
         <img src="imgs/Forjex-logo.png" alt="">
@@ -13,7 +18,8 @@
         <p>✦ 100% free and open-source — community contributions welcome!</p>
     </div>
 
-    <div class="homelogin">
+
+    <div class="homelogin" style="<?= (isset($_SESSION['user_id']) && $_SESSION['user_id']) ? 'display:none' : 'display:flex'; ?>">
         <a data-active="login" href="?page=login&state=login">Login</a>
         <p>Or</p>
         <a data-active="register" href="?page=login&state=register">Register</a>

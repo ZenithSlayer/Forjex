@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<?php include "includes/db.php"
+?>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,24 +17,20 @@
     <?php include "includes/header.php" ?>
 
     <main>
-
+        
         <?php
-        // Default page
         $page = 'home';
 
-        // Check if a page is requested
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
         }
 
-        // Whitelist pages for security
-        $allowed_pages = ['home', 'about', 'contact', 'login', 'error'];
+        $allowed_pages = ['home', 'about', 'contact', 'login' , 'error','create_character' , 'logout', 'view_character'];
 
         if (!in_array($page, $allowed_pages)) {
             $page = 'error';
         }
 
-        // Include the correct page content
         include "includes/pages/" . $page . ".php";
             ?>
     </main>
