@@ -342,6 +342,19 @@ footer .link p:hover {
     text-align: center;
 }
 
+.home .homecharacters {
+    width: fit-content;
+    border: solid 3px rgb(159, 159, 255);
+    margin: 50px auto;
+    padding: 15px;
+    border-radius: 10px;
+    transition: border 1s, scale 1s;
+}
+.home .homecharacters:hover {
+    border: solid 3px blue;
+    scale: 1.5;
+}
+
 @media screen and (max-width: 800px) {
     .home .homelogin {
         flex-direction: column;

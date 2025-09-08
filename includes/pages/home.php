@@ -20,8 +20,11 @@ session_start();
 
 
     <div class="homelogin" style="<?= (isset($_SESSION['user_id']) && $_SESSION['user_id']) ? 'display:none' : 'display:flex'; ?>">
-        <a data-active="login" href="?page=login&state=login">Login</a>
+        <a href="?page=login&state=login">Login</a>
         <p>Or</p>
-        <a data-active="register" href="?page=login&state=register">Register</a>
+        <a href="?page=login&state=register">Register</a>
+    </div>
+    <div class="homecharacters" style="<?= (isset($_SESSION['user_id']) && $_SESSION['user_id']) ? 'display:flex' : 'display:none'; ?>">
+        <a href="?page=charcterview">View your Characters</a>
     </div>
 </div>
