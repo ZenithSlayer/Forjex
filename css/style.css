@@ -350,8 +350,41 @@ footer .link p:hover {
     border-radius: 10px;
     transition: border 1s, scale 1s;
 }
+
 .home .homecharacters:hover {
     border: solid 3px blue;
+    scale: 1.5;
+}
+
+/* Error */
+
+.e404 {
+    width: fit-content;
+    text-align: center;
+    margin: 60px auto;
+}
+
+.e404 .text p {
+    color: rgb(221, 221, 221);
+}
+
+.e404 .text p:first-child {
+    color: black;
+    font-size: xx-large;
+}
+
+.e404 .link p {
+    width: fit-content;
+    border: solid 3px rgb(159, 159, 255);
+    padding: 10px;
+    border-radius: 10px;
+    transition: border 1s, scale 1s;
+    margin: 20px auto;
+}
+
+.e404 .link p:hover {
+    border: solid 3px blue;
+    
     scale: 1.5;
 }
 
