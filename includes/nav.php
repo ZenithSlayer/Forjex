@@ -1,7 +1,3 @@
-<?php
-session_start();
-?>
-
 <nav class="main-nav">
     <div class="logo">
         <a href="?page=home">

@@ -1,8 +1,3 @@
-<?php
-session_start();
-?>
-
-
 <div class="home">
     <div class="homelogo">
         <img src="imgs/Forjex-logo.png" alt="">

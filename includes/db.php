@@ -2,7 +2,7 @@
 $host = "localhost";
 $dbname = "ForjexDB";
 $username = "root";
-$password = "sex2";
+$password = "";
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
