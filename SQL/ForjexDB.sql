@@ -55,15 +55,15 @@ INSERT INTO races VALUES
 ('tiefling',      0, 0, 0, 1, 0, 2, 30, 'common, infernal');
 
 INSERT INTO classes VALUES 
-('barbarian', 'd12', 'strength & constitution', 'light armor, medium armor, shields', ' simple weapons, martial weapons' , ''),
-('bard', 'd8', 'dexterity & charisma', 'light armor', 'simple weapons, hand crossbows, longswords, rapiers, shortswords'  'choice'),
-('cleric', 'd8', 'wisdom & charisma', 'light armor, medium armor, shields', 'all simple weapons' , ''),
-('druid', 'd8', 'intelligence & wisdom', 'light armor, medium armor (nonmetal), shields (nonmetal)', 'clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears' 'Herbalism kit'),
-('fighter', 'd10', 'strength & constitution', 'light armor, medium armor, heavy armor, shields', 'simple weapons, martial weapons' , ''),
-('monk', 'd8', 'strength & dexterity', '', 'simple weapons, shortswords' 'Three musical instruments of your choice'),
-('paladin', 'd10', 'wisdom & charisma', 'light armor, medium armor, heavy armor, shields', 'simple weapons, martial weapons' , ''),
-('ranger', 'd10', 'strength & dexterity', 'light armor, medium armor, shields', 'simple weapons, martial weapons' , ''),
-('rogue', 'd8', 'dexterity & intelligence', 'light armor', 'simple weapons, hand crossbows, longswords, rapiers, shortswords' 'Thieves’ tools'),
-('sorcerer', 'd6', 'constitution & charisma', '', 'daggers, darts, slings, quarterstaffs, light crossbows' , ''),
-('warlock', 'd8', 'wisdom & charisma', 'light armor', 'simple weapons' , ''),
-('wizard', 'd6', 'intelligence & wisdom', '', 'daggers, darts, slings, quarterstaffs, light crossbows' , '');
+('barbarian', 'd12', 'strength & constitution', 'light armor, medium armor, shields', 'simple weapons, martial weapons', NULL),
+('bard', 'd8', 'dexterity & charisma', 'light armor', 'simple weapons, hand crossbows, longswords, rapiers, shortswords', 'choice'),
+('cleric', 'd8', 'wisdom & charisma', 'light armor, medium armor, shields', 'all simple weapons', NULL),
+('druid', 'd8', 'intelligence & wisdom', 'light armor, medium armor (nonmetal), shields (nonmetal)', 'clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears', 'Herbalism kit'),
+('fighter', 'd10', 'strength & constitution', 'light armor, medium armor, heavy armor, shields', 'simple weapons, martial weapons', NULL),
+('monk', 'd8', 'strength & dexterity', NULL, 'simple weapons, shortswords', 'Three musical instruments of your choice'),
+('paladin', 'd10', 'wisdom & charisma', 'light armor, medium armor, heavy armor, shields', 'simple weapons, martial weapons', NULL),
+('ranger', 'd10', 'strength & dexterity', 'light armor, medium armor, shields', 'simple weapons, martial weapons', NULL),
+('rogue', 'd8', 'dexterity & intelligence', 'light armor', 'simple weapons, hand crossbows, longswords, rapiers, shortswords', 'Thieves’ tools'),
+('sorcerer', 'd6', 'constitution & charisma', NULL, 'daggers, darts, slings, quarterstaffs, light crossbows', NULL),
+('warlock', 'd8', 'wisdom & charisma', 'light armor', 'simple weapons', NULL),
+('wizard', 'd6', 'intelligence & wisdom', NULL, 'daggers, darts, slings, quarterstaffs, light crossbows', NULL);
