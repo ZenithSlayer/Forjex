@@ -28,7 +28,8 @@ CREATE TABLE classes (
     hitdie VARCHAR(3),
     savingthrows VARCHAR(50),
     armorprof TEXT,
-    weaponprof TEXT
+    weaponprof TEXT,
+    toolsprof TEXT
 );
 
 CREATE TABLE races (
