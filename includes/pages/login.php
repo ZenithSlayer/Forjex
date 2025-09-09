@@ -1,6 +1,4 @@
 <?php
-session_start();
-include "db.php";
 
 $state = $_GET['state'] ?? 'login';
 $otherstate = $state === 'login' ? 'register' : 'login';
