@@ -11,11 +11,11 @@ CREATE TABLE users (
 );
 
 CREATE TABLE chars (
-user_id BIGINT,
+    user_id BIGINT,
     char_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     charname VARCHAR(50) NOT NULL,
     charclass VARCHAR(50) NOT NULL,
-charlv INT(2) NOT NULL,
+    charlv INT(2) NOT NULL,
     str_stat INT(2) DEFAULT 10 NOT NULL,
     dex_stat INT(2) DEFAULT 10 NOT NULL,
     con_stat INT(2) DEFAULT 10 NOT NULL,
@@ -53,10 +53,10 @@ INSERT INTO races VALUES
 ('dwarf',         0, 0, 2, 0, 0, 0, 25, 'common, dwarvish'),
 ('elf',           0, 2, 0, 0, 0, 0, 30, 'common, elvish'),
 ('halfling',      0, 2, 0, 0, 0, 0, 25, 'common, halfling'),
-('human',         1, 1, 1, 1, 1, 1, 30, 'common, one extra language of your choice'),
+('human',         1, 1, 1, 1, 1, 1, 30, 'common, +1'),
 ('dragonborn',    2, 0, 0, 0, 0, 1, 30, 'common, draconic'),
 ('gnome',         0, 0, 0, 2, 0, 0, 25, 'common, gnomish'),
-('half-elf',      0, 0, 0, 0, 0, 2, 30, 'common, elvish, one extra language of your choice'),
+('half-elf',      0, 0, 0, 0, 0, 2, 30, 'common, elvish, +1'),
 ('half-orc',      2, 0, 1, 0, 0, 0, 30, 'common, orc'),
 ('tiefling',      0, 0, 0, 1, 0, 2, 30, 'common, infernal');
 
