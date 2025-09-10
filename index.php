@@ -25,7 +25,7 @@
             $page = $_GET['page'];
         }
 
-        $allowed_pages = ['home', 'about', 'contact', 'login' , 'error','create_character' , 'logout', 'view_character'];
+        $allowed_pages = ['home', 'about', 'contact', 'login' , 'error', 'createchar' , 'logout', 'view_character'];
 
         if (!in_array($page, $allowed_pages)) {
             $page = 'error';
