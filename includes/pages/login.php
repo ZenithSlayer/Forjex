@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $hashed = password_hash($password, PASSWORD_DEFAULT);
 
         try {
-            $check = $pdo->prepare("SELECT id FROM users WHERE email = ?");
+            $check = $pdo->prepare("SELECT user_id FROM users WHERE email = ?");
             $check->execute([$email]);
 
             if ($check->fetch()) {
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $user = $stmt->fetch();
 
         if ($user && password_verify($password, $user['password'])) {
-            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['user_email'] = $user['email'];
 
             header("Location: ?page=home");
