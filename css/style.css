@@ -1,3 +1,10 @@
+:root {
+    --main-orange: #fea252;
+    --light-orange: #ffd0a7;
+    --main-red: #ff2e2e;
+    --light-red: #ff6f6f;
+}
+
 /* Basic configuartion */
 
 * {
