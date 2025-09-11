@@ -1,15 +1,15 @@
 <div class="contact">
     <div class="link">
-        <a href="https://instagram.com"><img src="imgs/Gmail.png" alt="">
+        <a href="mailto:miguellurk+forjex@gmail.com"><img src="imgs/Gmail.png" alt="">
             <p>Gmail</p>
         </a>
-        <a href="https://instagram.com"><img src="imgs/Instagram.png" alt="">
+        <a href="https://www.instagram.com/zenith.slayer/"><img src="imgs/Instagram.png" alt="">
             <p>Instagram</p>
         </a>
-        <a href="https://instagram.com"><img src="imgs/Github.png" alt="">
+        <a href="https://github.com/ZenithSlayer"><img src="imgs/Github.png" alt="">
             <p>Github</p>
         </a>
-        <a href="https://instagram.com"><img src="imgs/Github.png" alt="">
+        <a href="https://github.com/ZenithSlayer/forjex"><img src="imgs/Github.png" alt="">
             <p>Project Git</p>
         </a>
     </div>
