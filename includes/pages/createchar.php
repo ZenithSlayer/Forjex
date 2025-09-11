@@ -5,11 +5,9 @@
     <select name="race" id="race">
         <option value="" default hidden>Select your Race</option>
         <?php
-        $Sql = "SELECT race FROM races";
-        $Result = $pdo->query($Sql);
-
-        if ($Result) {
-            while ($row = $Result->fetch(PDO::FETCH_ASSOC)) {
+        $result = $pdo->query("SELECT race FROM races");
+        if ($result) {
+            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                 echo '<option value="' . $row['race'] . '">' . $row['race'] . '</option>';
             }
         } else {
@@ -17,18 +15,16 @@
         }
         ?>
     </select>
-
+    
     <div class="classlv">
         <div>
             <p>Class</p>
             <select name="class" id="class">
                 <option value="" default hidden>Select your class</option>
                 <?php
-                $Sql = "SELECT class FROM classes";
-                $Result = $pdo->query($Sql);
-        
-                if ($Result) {
-                    while ($row = $Result->fetch(PDO::FETCH_ASSOC)) {
+                $result = $pdo->query("SELECT class FROM classes");        
+                if ($result) {
+                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
                         echo '<option value="' . $row['class'] . '">' . $row['class'] . '</option>';
                     }
                 } else {
