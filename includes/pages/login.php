@@ -3,8 +3,6 @@
 $state = $_GET['state'] ?? 'login';
 $otherstate = $state === 'login' ? 'register' : 'login';
 
-$message = "";
-
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
@@ -51,16 +49,18 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 ?>
 
 <div class="login">
-    <?php if ($message): ?>
-        <p><?= $message ?></p>
-    <?php endif; ?>
+    <div class="error" style="opacity: <?= isset($message) ? 1 : 0 ?>;">
+        <?php if ($message): ?>
+            <p> <?= $message ?> </p>
+        <?php endif; ?>
+    </div>
 
     <form class="emailpass" method="post">
         <p>Email</p>
-        <input type="email" name="email" required>
+        <input type="email" name="email" placeholder="Input your email" required>
         <p>Password</p>
-        <input type="password" name="password" required>
-        <input type="submit" value="<?= $state === 'login' ? 'Login' : 'Register' ?>">
+        <input type="password" name="password" placeholder="Input your password" required>
+        <input class="send" type="submit" value="<?= $state === 'login' ? 'Login' : 'Register' ?>">
         <a href="?page=login&state=<?= $otherstate ?>">
             <p><?= $state === 'login' ? 'Dont have an account?' : 'Already have an account?' ?></p>
         </a>
