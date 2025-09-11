@@ -36,14 +36,15 @@ nav .logo a {
 }
 
 nav .logo a p {
-    font-size: 20px;
-    font-weight: bold;
-    color: #245990;
+    font-size: 30px;
+    color: #fe9132;
+    text-shadow: #8d8d8d 0 0 3px;
     margin: auto 0 auto 10px;
 }
 
 nav .logo a img {
     height: 65px;
+    margin: 5px 0;
 }
 
 nav .links {
@@ -54,35 +55,29 @@ nav .links {
 }
 
 nav .links a {
+    color: red;
     text-decoration: none;
     padding: 10px 20px;
     font-size: 18px;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, box-shadow 1s, scale 1s;
+    border-radius: 6px;
+    box-shadow: 0 0 2px gray;
+}
+
+
+nav .links a:hover {
+    box-shadow: 0 0 5px gray;
+    background: #ffa04d;
+}
+
+nav .links a.active {
+    background: #ffb472;
 }
 
 nav .links a:hover,
-nav .links a:active {
-    background: #4d9176;
+nav .links a.active {
     color: white;
-    border-radius: 3px;
-}
-
-nav .loginnav {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-nav .loginnav a {
-    border-radius: 10px;
-    padding: 10px 20px;
-    border: solid 3px rgb(159, 159, 255);
-    transition: transform 0.3s, border 0.3s;
-}
-
-nav .loginnav a:hover {
-    border-color: blue;
-    transform: scale(1.2);
+    scale: 1.1;
 }
 
 /* Header */
@@ -194,29 +189,29 @@ footer .link p:hover {
     width: 80vw;
     max-width: 1500px;
     display: flex;
-justify-content: space-between;
+    justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
     padding: 20px;
     border-radius: 20px;
-gap: 10px;
+    gap: 10px;
 }
 
 .contact .link a {
-flex: 1 1 0px;
+    flex: 1 1 0px;
     display: flex;
     border: white solid 2px;
     border-radius: 20px;
-        padding: 0 20px;
+    padding: 0 20px;
     background-color: #555;
     height: 120px;
-        flex-direction: row;
+    flex-direction: row;
     transition: scale 0.6s, box-shadow 5s;
     z-index: 1;
 }
 
 .contact .link a:hover {
-z-index: 2;
+    z-index: 2;
     scale: 1.1;
     box-shadow: #ffbf00 0 0 40px;
 }
