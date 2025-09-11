@@ -1,44 +1,40 @@
-<form action="" class="createchar">
-    <p>Character Name</p>
-    <input type="text">
-    <p>Race</p>
-    <select name="race" id="race">
-        <option value="" default hidden>Select your Race</option>
-        <?php
-        $result = $pdo->query("SELECT race FROM races");
-        if ($result) {
-            while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                echo '<option value="' . $row['race'] . '">' . $row['race'] . '</option>';
-            }
-        } else {
-            echo '<option value="">Error loading races</option>';
-        }
-        ?>
-    </select>
-    
-    <div class="classlv">
-        <div>
-            <p>Class</p>
-            <select name="class" id="class">
-                <option value="" default hidden>Select your class</option>
-                <?php
-                $result = $pdo->query("SELECT class FROM classes");        
-                if ($result) {
-                    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-                        echo '<option value="' . $row['class'] . '">' . $row['class'] . '</option>';
-                    }
-                } else {
-                    echo '<option value="">Error loading classes</option>';
-                }
-                ?>
-            </select>
-        </div>
-        <div>
-            <p>Character Level</p>
-            <input type="number" name="" id="" min="1" max="20" value="1">
+<?php
+$races = $pdo->query('SELECT race FROM races');
+$classes = $pdo->query('SELECT class FROM classes');
+?>
+
+<div class="createchar">
+    <div class="settings1">
+        <p>Character Name</p>
+        <input type="text" name="charname">
+
+        <p>Race</p>
+        <select name="race" id="race">
+            <option value="" hidden>Select your Race</option>
+            <?php foreach ($races as $row): ?>
+                <option value="<?= $row['race'] ?>">
+                    <?= $row['race'] ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+        <div class="classlv">
+            <div>
+                <p>Class</p>
+                <select name="class" id="class">
+                    <option value="" hidden>Select your Race</option>
+                    <?php foreach ($classes as $row): ?>
+                        <option value="<?= $row['class'] ?>">
+                            <?= $row['class'] ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div>
+                <p>Character Level</p>
+                <input type="number" name="" id="" min="1" max="20" value="1">
+            </div>
         </div>
     </div>
-
     <div class="stats">
         <div>
             <p>Stat 1</p>
@@ -65,4 +61,4 @@
             <input type="number" name="" id="" min="1" max="20" value="10">
         </div>
     </div>
-</form>
+</div>
