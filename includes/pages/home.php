@@ -20,6 +20,6 @@
         <a href="?page=login&state=register">Register</a>
     </div>
     <div class="homecharacters" style="<?= (isset($_SESSION['user_id']) && $_SESSION['user_id']) ? 'display:flex' : 'display:none'; ?>">
-        <a href="?page=charcterview">View your Characters</a>
+        <a href="?page=createchar">View your Characters</a>
     </div>
 </div>
