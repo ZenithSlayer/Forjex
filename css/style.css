@@ -247,7 +247,8 @@ footer .link p:hover {
 .login .emailpass {
     margin: auto;
     background-color: #999;
-    border: inset 5px #333;
+    border: solid 5px var(--light-red);
+    box-shadow: 0 0 20px black;
     display: flex;
     flex-direction: column;
     height: fit-content;
@@ -272,6 +273,15 @@ footer .link p:hover {
 
 .login .emailpass p:last-child:hover {
     scale: 1.1;
+}
+
+.login .emailpass input:nth-of-type(-n+2) {
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+.login .emailpass input:nth-of-type(3) {
+    font-size: 15px;
 }
 
 .login .send {
