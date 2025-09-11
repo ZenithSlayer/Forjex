@@ -22,7 +22,6 @@ CREATE TABLE chars (
     int_stat INT(2) DEFAULT 10 NOT NULL,
     wis_stat INT(2) DEFAULT 10 NOT NULL,
     cha_stat INT(2) DEFAULT 10 NOT NULL,
-    languages TEXT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
     ON DELETE CASCADE
     ON UPDATE CASCADE
