@@ -53,14 +53,17 @@ nav .logo a img {
     margin: 5px 0;
 }
 
-nav .links {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+nav .navlinks {
     margin-left: auto;
 }
 
-nav .links a {
+nav .navlinks .links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+nav .navlinks .links a {
     color: var(--main-red);
     text-decoration: none;
     padding: 10px 20px;
@@ -71,19 +74,41 @@ nav .links a {
 }
 
 
-nav .links a:hover {
+nav .navlinks .links a:hover {
     box-shadow: 0 0 5px gray;
     background: var(--main-orange);
 }
 
-nav .links a:hover,
-nav .links a.active {
+nav .navlinks .links a:hover,
+nav .navlinks .links a.active {
     color: black;
     scale: 1.1;
 }
 
-nav .links a.active {
+nav .navlinks .links a.active {
     background: var(--light-orange);
+}
+
+nav .navlinkscol {
+    width: 50vw;
+    height: 100vh;
+    background-color: var(--light-orange);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+nav .navlinkscol .links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+nav .navlinkscol .links a {
+    color: black;
+    background-color: var(--main-orange);
+    font-size: 20px;
+    padding: 15px;
 }
 
 /* Header */
@@ -374,7 +399,7 @@ footer .link p:hover {
     transition: border 1s, scale 1s;
 }
 
-.home .homecharacters a{
+.home .homecharacters a {
     color: black;
 
 }
@@ -420,6 +445,76 @@ footer .link p:hover {
     scale: 1.1;
 }
 
+.createchar {
+    width: fit-content;
+    margin: auto;
+}
+
+.createchar input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0;
+    /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.createchar input[type=number] {
+    -moz-appearance: textfield;
+    /* Firefox */
+}
+
+.createchar .charinfo {
+    width: 300px;
+    background-color: #999;
+    padding: 10px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.createchar .charinfo input {
+    font-size: 20px;
+}
+
+.createchar .charinfo select {
+    width: 100%;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+
+.createchar .charinfo .class {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.createchar .charinfo .class #level {
+    text-align: center;
+    width: 100%;
+    font-size: 18px;
+}
+
+.createchar .charstats {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: auto;
+    background-color: #999;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.createchar .charstats p {
+    text-align: center;
+}
+
+.createchar .charstats input {
+    font-size: 30px;
+    text-align: center;
+}
+
+
 @media screen and (max-width: 800px) {
     .home .homelogin {
         flex-direction: column;
@@ -453,4 +548,7 @@ footer .link p:hover {
         flex-direction: column;
     }
 
+    nav .navlinks {
+        display: none;
+    }
 }
