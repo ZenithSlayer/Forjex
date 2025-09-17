@@ -27,10 +27,11 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
                     <a href="?page=login&state=register">Register</a>
                 <?php endif; ?>
             </div>
-            <p style="display: block;">X</p>
         </div>
     </div>
-    <div class="navlinkscol" style="display: none;">
+    <p class="opensidebar" onclick="showside('open')"><img src="./imgs/menu.png"></p>
+    <div class="sidebar" id="sidebar" style="display: none;">
+        <p class="closebutton" onclick="showside('close')"><img src="./imgs/menu.png"></p>
         <div class="links">
             <a href="?page=home" class="<?php echo ($page == 'home') ? 'active' : '' ?>">Home</a>
             <a href="?page=about" class="<?php echo ($page == 'about') ? 'active' : '' ?>">About</a>
@@ -45,3 +46,14 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
         </div>
     </div>
 </nav>
+
+<script>
+    function showside(a) {
+        var sidebar = document.getElementById('sidebar');
+        if (a == 'open') {
+            sidebar.style.display = 'block'
+        } else {
+            sidebar.style.display = 'none'
+        }
+    }
+</script>

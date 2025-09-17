@@ -89,26 +89,46 @@ nav .navlinks .links a.active {
     background: var(--light-orange);
 }
 
-nav .navlinkscol {
-    width: 50vw;
+
+nav .sidebar {
+    position: fixed;
+    z-index: 3;
+    width: 55vw;
     height: 100vh;
     background-color: var(--light-orange);
-    position: fixed;
     top: 0;
     right: 0;
 }
 
-nav .navlinkscol .links {
+nav .sidebar .links {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 5px;
 }
 
-nav .navlinkscol .links a {
+nav .sidebar .links a {
     color: black;
     background-color: var(--main-orange);
     font-size: 20px;
     padding: 15px;
+}
+
+nav .opensidebar, nav .closebutton {
+    background-color: #afafaf;
+}
+
+nav .opensidebar {
+    display: none;
+    margin-left: auto;
+    height: 60px;
+    border-radius: 10px;
+}
+
+nav .closebutton {
+    border-radius: 10px;
+    margin: 10px;
+    width: 100%;
+    align-items: center;
 }
 
 /* Header */
@@ -214,7 +234,7 @@ footer .link p:hover {
 .contact .link {
     margin: auto;
     background-color: #333;
-    width: 80vw;
+    width: fit-content;
     max-width: 1500px;
     display: flex;
     flex-direction: row;
@@ -229,11 +249,13 @@ footer .link p:hover {
     display: flex;
     border: white solid 2px;
     border-radius: 20px;
-    padding: 0 20px;
+    padding: 10px 20px;
     background-color: #555;
-    height: 120px;
+    min-height: 120px;
+    min-width: fit-content;
     flex-direction: row;
     transition: scale 0.6s, box-shadow 5s;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -251,8 +273,7 @@ footer .link p:hover {
 .contact .link p {
     font-size: 30px;
     color: white;
-    margin: auto;
-    margin-left: 10px;
+    margin: auto 20px;
 }
 
 /* Login */
@@ -519,40 +540,50 @@ input::-webkit-inner-spin-button {
     .home .homelogin {
         flex-direction: column;
     }
-
+    
     .home .homelogin a {
         font-size: 30px;
     }
-
+    
     footer {
         flex-direction: column;
     }
-
+    
     footer .link {
-        margin: auto;
+        flex-direction: row;
+        margin: 30px auto 0 auto;
     }
-
+    
     footer .link a {
         flex-direction: column;
     }
-
-    footer .link a:first-child {
-        margin-top: 30px;
-    }
-
+    
     footer .link img {
         margin: auto;
     }
-
+    
     .block {
         flex-direction: column;
     }
-
+    
     .block img{
         margin-bottom: 25px;
     }
-
+    
+    nav .opensidebar {
+        display: block;
+    }
+    
     nav .navlinks {
         display: none;
+    }
+    .contact .link a {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 1200px) {
+    .contact .link {
+        border-radius: 0;
     }
 }
