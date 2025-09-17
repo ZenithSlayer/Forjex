@@ -14,10 +14,10 @@
         </a>
     </div>
     <div class="block" style="margin: 50px auto;">
-        <img src="imgs/temp.jpg" alt="">
+        <img src="imgs/contact.jpg" alt="">
         <div class="text">
-            <p>Who am i</p>
-            <p>Take this shitload of Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse cupiditate, dignissimos ea amet, quae nihil aliquam est sed, totam itaque fugit quaerat! Sunt autem excepturi, obcaecati alias aperiam ducimus ipsa?</p>
+            <p>How can we contact you?</p>
+            <p>As you can see, i have a few links in this page so you can email me or send me a DM, i'll try to answer as soon as i can (profesional way to say maybe in 3 days or 4 months)</p>
         </div>
     </div>
 </div>

@@ -181,7 +181,7 @@ footer .link p:hover {
 
 .block {
     margin: 10px auto;
-    max-width: 1500px;
+    max-width: 1000px;
     width: 75vw;
     background-color: #333;
     padding: 20px;
@@ -546,6 +546,10 @@ input::-webkit-inner-spin-button {
 
     .block {
         flex-direction: column;
+    }
+
+    .block img{
+        margin-bottom: 25px;
     }
 
     nav .navlinks {
