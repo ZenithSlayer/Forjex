@@ -21,6 +21,7 @@ body {
 }
 
 main {
+    display: flex;
     min-height: 66vh;
     margin: 10px 0;
 }
@@ -118,7 +119,8 @@ nav .sidebar .links a {
     box-shadow: var(--light-red) 0 0 5px;
 }
 
-nav .opensidebar, nav .closebutton {
+nav .opensidebar,
+nav .closebutton {
     background-color: var(--light-orange);
 }
 
@@ -129,7 +131,7 @@ nav .opensidebar {
     border-radius: 10px;
 }
 
-nav .opensidebar img{
+nav .opensidebar img {
     height: 55px;
 }
 
@@ -206,6 +208,12 @@ footer .link p:hover {
     scale: 1.2;
 }
 
+/* About */
+
+.about {
+    margin: auto;
+}
+
 /* Generic block with image */
 
 .block {
@@ -241,6 +249,7 @@ footer .link p:hover {
 /* Contact */
 
 .contact {
+    margin: auto;
     align-self: center;
 }
 
@@ -441,26 +450,30 @@ footer .link p:hover {
 
 /* List of characters */
 
-.charlist {
-    text-align: center;
-}
-
-.charlist .nochar {
+.chatlist {
+    display: flex;
+    justify-content: center;
     margin: auto;
-    height: fit-content;
-    width: fit-content;
 }
 
-.charlist .nochar p {
+.chatlist .nochar {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.chatlist .nochar p {
     font-size: 30px;
-    margin-bottom: 10px;
 }
 
-.charlist .nochar a {
+.chatlist .nochar a {
     background-color: var(--light-orange);
     border-radius: 5px;
     color: black;
     padding: 5px 20px;
+    width: fit-content;
+    margin: auto;
 }
 
 /* Error */
@@ -501,52 +514,53 @@ footer .link p:hover {
     .home .homelogin {
         flex-direction: column;
     }
-    
+
     .home .homelogin a {
         font-size: 30px;
     }
-    
+
     footer {
         flex-direction: column;
     }
-    
+
     footer .link {
         flex-direction: row;
         margin: 30px auto 0 auto;
     }
-    
+
     footer .link a {
         flex-direction: column;
     }
-    
+
     footer .link img {
         margin: auto;
     }
-    
+
     .block {
         flex-direction: column;
     }
-    
-    .block img{
+
+    .block img {
         margin-bottom: 25px;
     }
-    
+
     nav .opensidebar {
         display: block;
     }
-    
+
     nav .navlinks {
         display: none;
     }
+
     .contact .link a {
         flex-direction: column;
         align-items: center;
     }
 
     .home {
-    width: 100vw;
-    max-width: 100vw;
-    border-radius: 0px;
+        width: 100vw;
+        max-width: 100vw;
+        border-radius: 0px;
     }
 
     .login {
@@ -556,6 +570,7 @@ footer .link p:hover {
     }
 
 }
+
 @media screen and (max-width: 1200px) {
     .contact .link {
         border-radius: 0;
