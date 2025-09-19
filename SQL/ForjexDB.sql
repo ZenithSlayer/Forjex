@@ -11,17 +11,18 @@ CREATE TABLE users (
 );
 
 CREATE TABLE chars (
-    user_id BIGINT,
+    user_id BIGINT NOT NULL,
     char_id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     charname VARCHAR(50) NOT NULL,
     charclass VARCHAR(50) NOT NULL,
-    charlv INT(2) NOT NULL,
-    str_stat INT(2) DEFAULT 10 NOT NULL,
-    dex_stat INT(2) DEFAULT 10 NOT NULL,
-    con_stat INT(2) DEFAULT 10 NOT NULL,
-    int_stat INT(2) DEFAULT 10 NOT NULL,
-    wis_stat INT(2) DEFAULT 10 NOT NULL,
-    cha_stat INT(2) DEFAULT 10 NOT NULL,
+    charrace VARCHAR(50) NOT NULL,
+    charlv INT NOT NULL,
+    str_stat INT DEFAULT 10 NOT NULL,
+    dex_stat INT DEFAULT 10 NOT NULL,
+    con_stat INT DEFAULT 10 NOT NULL,
+    int_stat INT DEFAULT 10 NOT NULL,
+    wis_stat INT DEFAULT 10 NOT NULL,
+    cha_stat INT DEFAULT 10 NOT NULL,
     FOREIGN KEY (user_id) REFERENCES users(user_id)
     ON DELETE CASCADE
     ON UPDATE CASCADE

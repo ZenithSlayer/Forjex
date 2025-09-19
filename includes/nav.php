@@ -20,7 +20,7 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
             </div>
             <div class="speciallink">
                 <?php if (isset($_SESSION['user_id'])): ?>
-                    <a href="?page=createchar">Characters</a>
+                    <a href="?page=charlist">Characters</a>
                     <a href="?page=logout">Logout</a>
                 <?php else: ?>
                     <a href="?page=login&state=login">Login</a>
@@ -29,15 +29,15 @@ $page = isset($_GET['page']) ? $_GET['page'] : 'home';
             </div>
         </div>
     </div>
-    <p class="opensidebar" onclick="showside('open')"><img src="./imgs/menu.png"></p>
+    <div class="opensidebar" onclick="showside('open')"><img src="./imgs/menu.png"></div>
     <div class="sidebar" id="sidebar" style="display: none;">
-        <p class="closebutton" onclick="showside('close')"><img src="./imgs/menu.png"></p>
+        <div class="closebutton" onclick="showside('close')"><img src="./imgs/menu.png"></div>
         <div class="links">
             <a href="?page=home" class="<?php echo ($page == 'home') ? 'active' : '' ?>">Home</a>
             <a href="?page=about" class="<?php echo ($page == 'about') ? 'active' : '' ?>">About</a>
             <a href="?page=contact" class="<?php echo ($page == 'contact') ? 'active' : '' ?>">Contact</a>
             <?php if (isset($_SESSION['user_id'])): ?>
-                <a href="?page=createchar">Characters</a>
+                <a href="?page=charlist">Characters</a>
                 <a href="?page=logout">Logout</a>
             <?php else: ?>
                 <a href="?page=login&state=login">Login</a>
