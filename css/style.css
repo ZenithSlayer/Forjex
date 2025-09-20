@@ -450,31 +450,76 @@ footer .link p:hover {
 
 /* List of characters */
 
-.chatlist {
-    display: flex;
-    justify-content: center;
+.characters {
     margin: auto;
 }
 
-.chatlist .nochar {
+.characters .createchar {
+margin: 20px 0;
     display: flex;
     flex-direction: column;
+        gap: 10px;
+}
+
+.characters .createchar p {
+padding: 0 10px;
     text-align: center;
+    font-size: 35px;
+}
+
+.characters .createchar a {
+border-radius: 10px;
+    align-self: center;
+    width: fit-content;
+    padding: 10px;
+    background-color: var(--light-orange);
+    box-shadow: #333 0 0 5px;
+    color: #555;
+}
+
+.characters .title {
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 45px;
+}
+
+.characters .charlist {
+    width: 85vw;
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
     gap: 10px;
 }
 
-.chatlist .nochar p {
-    font-size: 30px;
+.characters .charlist .char {
+    color: #555;
+    flex: 0 1 calc(33.33% - 2rem);
+    min-width: 350px;
+    border: 3px solid #333;
+    padding: 10px;
+    border-radius: 10px;
+    transition: scale 1s, box-shadow 1s;
 }
 
-.chatlist .nochar a {
-    background-color: var(--light-orange);
-    border-radius: 5px;
-    color: black;
-    padding: 5px 20px;
-    width: fit-content;
-    margin: auto;
+.characters .charlist .char:hover {
+    box-shadow: var(--main-orange) 0 0 10px;
+    scale: 1.1;
+    transform-origin: bottom;
 }
+
+.characters .charlist .char p {
+    text-align: center;
+}
+
+.characters .charlist .char .charname {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+.characters .charlist .char .charstats {
+    font-size: 13px;
+}
+
 
 /* Error */
 
@@ -569,6 +614,9 @@ footer .link p:hover {
         padding: 0 20px;
     }
 
+.characters .createchar p {
+        font-size: 25px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
