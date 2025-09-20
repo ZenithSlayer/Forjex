@@ -83,7 +83,7 @@ nav .navlinks .links a:hover {
 
 nav .navlinks .links a:hover,
 nav .navlinks .links a.active {
-    color: black;
+    color: #555;
     scale: 1.1;
 }
 
@@ -111,7 +111,7 @@ nav .sidebar .links {
 
 nav .sidebar .links a {
     text-align: center;
-    color: black;
+    color: #555;
     background-color: white;
     font-size: 20px;
     padding: 15px;
@@ -323,7 +323,7 @@ footer .link p:hover {
 }
 
 .login .emailpass p {
-    color: black;
+    color: #555;
 }
 
 .login .emailpass p:last-child {
@@ -410,7 +410,7 @@ footer .link p:hover {
 .home .homecharacters,
 .homelogin a {
     border-radius: 10px;
-    color: black;
+    color: #555;
     transition: border 1s, scale 1s, box-shadow 5s;
     border: solid 3px var(--light-red);
     background-color: var(--main-orange);
@@ -436,7 +436,7 @@ footer .link p:hover {
 }
 
 .home .homecharacters a {
-    color: black;
+    color: #555;
 
 }
 
@@ -455,20 +455,20 @@ footer .link p:hover {
 }
 
 .characters .createchar {
-margin: 20px 0;
+    margin: 20px 0;
     display: flex;
     flex-direction: column;
-        gap: 10px;
+    gap: 10px;
 }
 
 .characters .createchar p {
-padding: 0 10px;
+    padding: 0 10px;
     text-align: center;
     font-size: 35px;
 }
 
 .characters .createchar a {
-border-radius: 10px;
+    border-radius: 10px;
     align-self: center;
     width: fit-content;
     padding: 10px;
@@ -534,7 +534,7 @@ border-radius: 10px;
 }
 
 .e404 .text p:first-child {
-    color: black;
+    color: #555;
     font-size: xx-large;
 }
 
@@ -545,7 +545,7 @@ border-radius: 10px;
     border-radius: 10px;
     transition: border 1s, scale 1s;
     margin: 20px auto;
-    color: black;
+    color: #555;
     background-color: var(--light-orange);
 }
 
@@ -585,6 +585,10 @@ border-radius: 10px;
         flex-direction: column;
     }
 
+    .block .text {
+        text-align: center;
+    }
+
     .block img {
         margin-bottom: 25px;
     }
@@ -614,7 +618,7 @@ border-radius: 10px;
         padding: 0 20px;
     }
 
-.characters .createchar p {
+    .characters .createchar p {
         font-size: 25px;
     }
 }
