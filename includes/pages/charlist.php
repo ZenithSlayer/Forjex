@@ -10,23 +10,34 @@ $stmt->execute([$user_id]);
 $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<div class="chatlist">
-    <?php if (count($characters) === 0): ?>
-        <div class="nochar">
+<div class="characters">
+    <p class="title">Your Characters</p>
+    <div class="charlist">
+
+        <?php foreach ($characters as $char): ?>
+            <a class="char" href="?page=charsheet&charid=<?= $char['char_id'] ?>">
+                <p class="charname"><?= $char['charname'] ?></p>
+                <p class="charinfo">
+                    (Level <?= (int)$char['charlv'] ?>
+                    <?= $char['charclass'] ?>
+                    - <?= $char['charrace'] ?>)
+                </p>
+                <p class="charstats">
+                    STR <?= (int)$char['str_stat'] ?>,
+                    DEX <?= (int)$char['dex_stat'] ?>,
+                    CON <?= (int)$char['con_stat'] ?>,
+                    INT <?= (int)$char['int_stat'] ?>,
+                    WIS <?= (int)$char['wis_stat'] ?>,
+                    CHA <?= (int)$char['cha_stat'] ?>
+                </p>
+            </a>
+        <?php endforeach; ?>
+    </div>
+
+    <div class="createchar">
+        <?php if (count($characters) === 0): ?>
             <p>You have no characters created yet.</p>
-            <a href="?page=createchar">Create Character</a>
-        </div>
-    <?php else: ?>
-        <p>Your Characters</p>
-        <ul>
-            <?php foreach ($characters as $char): ?>
-                <li>
-                    <strong><?= htmlspecialchars($char['charname']) ?></strong>
-                    (Level <?= $char['charlv'] ?> <?= htmlspecialchars($char['charclass']) ?> - <?= htmlspecialchars($char['charrace']) ?>)<br>
-                    Stats: STR <?= $char['str_stat'] ?>, DEX <?= $char['dex_stat'] ?>, CON <?= $char['con_stat'] ?>,
-                    INT <?= $char['int_stat'] ?>, WIS <?= $char['wis_stat'] ?>, CHA <?= $char['cha_stat'] ?>
-                </li><br>
-            <?php endforeach; ?>
-        </ul>
-    <?php endif; ?>
+        <?php endif; ?>
+        <a href="?page=createchar">Create Character</a>
+    </div>
 </div>
