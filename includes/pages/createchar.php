@@ -24,9 +24,11 @@ if (!isset($_SESSION['user_id'])) {
 <?php endif; ?>
 
 <form class="createchar" method="POST" action="?page=sendchar">
-    <div class="charinfo">
-        <p>Character Name</p>
-        <input type="text" name="charname">
+    <div class="formsec">
+        <div class="name">
+            <p>Character Name</p>
+            <input type="text" name="charname">
+        </div>
         <div class="race">
             <p>Race</p>
             <select name="charrace">
@@ -38,47 +40,47 @@ if (!isset($_SESSION['user_id'])) {
                 <?php endforeach; ?>
             </select>
         </div>
-        <div class="class">
-            <div>
-                <p>Class</p>
-                <select name="charclass">
-                    <option value="" hidden>Select your class</option>
-                    <?php foreach ($classes as $row): ?>
-                        <option value="<?= $row['class'] ?>">
-                            <?= $row['class'] ?>
-                        </option>
-                    <?php endforeach; ?>
-                </select>
-            </div>
-            <div>
-                <p>Character Level</p>
-                <input type="number" name="charlv" min="1" max="20" placeholder="1" oninput="limitToMax(this)">
-            </div>
+    </div>
+    <div class="formsec">
+        <div>
+            <p>Class</p>
+            <select name="charclass">
+                <option value="" hidden>Select your class</option>
+                <?php foreach ($classes as $row): ?>
+                    <option value="<?= $row['class'] ?>">
+                        <?= $row['class'] ?>
+                    </option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+        <div>
+            <p>Character Level</p>
+            <input type="number" name="charlv" min="1" max="20" placeholder="1" oninput="limitToMax(this)">
         </div>
     </div>
     <div class="charstats">
-        <div>
-            <p>Stat 1</p>
+        <div class="stat">
+            <p>STR</p>
             <input type="number" name="stat1" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
         </div>
-        <div>
-            <p>Stat 2</p>
+        <div class="stat">
+            <p>DEX</p>
             <input type="number" name="stat2" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
         </div>
-        <div>
-            <p>Stat 3</p>
+        <div class="stat">
+            <p>CON</p>
             <input type="number" name="stat3" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
         </div>
-        <div>
-            <p>Stat 4</p>
+        <div class="stat">
+            <p>INT</p>
             <input type="number" name="stat4" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
         </div>
-        <div>
-            <p>Stat 5</p>
+        <div class="stat">
+            <p>WIS</p>
             <input type="number" name="stat5" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
         </div>
-        <div>
-            <p>Stat 6</p>
+        <div class="stat">
+            <p>CHA</p>
             <input type="number" name="stat6" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
         </div>
     </div>

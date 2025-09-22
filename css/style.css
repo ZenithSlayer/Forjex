@@ -22,7 +22,7 @@ body {
 
 main {
     display: flex;
-    min-height: 66vh;
+    min-height: 67vh;
     margin: 10px 0;
 }
 
@@ -448,6 +448,57 @@ footer .link p:hover {
     scale: 1.1;
 }
 
+/* Character creator */
+
+.createchar {
+    margin: auto;
+    height: fit-content;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: var(--light-orange);
+}
+
+.createchar .formsec {
+    margin: 10px 0;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.createchar .formsec p{
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+.createchar .formsec input, .createchar .formsec select {
+    width: 100%;
+}
+
+.createchar .charstats {
+    justify-content: space-around;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 0;
+    gap: 10px;
+}
+
+.createchar .charstats .stat {
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-orange);
+}
+
+.createchar button {
+    padding: 10px;
+    display: flex;
+    margin: auto;
+}
+
 /* List of characters */
 
 .characters {
@@ -484,7 +535,7 @@ footer .link p:hover {
 }
 
 .characters .charlist {
-    width: 85vw;
+    margin: auto;
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
@@ -620,6 +671,11 @@ footer .link p:hover {
 
     .characters .createchar p {
         font-size: 25px;
+    }
+
+    .createchar {
+        width: 100vw;
+        border-radius: 0;
     }
 }
 
