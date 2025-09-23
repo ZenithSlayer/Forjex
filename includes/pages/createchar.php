@@ -1,6 +1,4 @@
 <?php
-$races = $pdo->query('SELECT race FROM races');
-$classes = $pdo->query('SELECT class FROM classes');
 if (!isset($_SESSION['user_id'])) {
     header("Location: ?page=login&state=login");
 }
@@ -25,32 +23,22 @@ if (!isset($_SESSION['user_id'])) {
 
 <form class="createchar" method="POST" action="?page=sendchar">
     <div class="formsec">
-        <div class="name">
+        <div>
             <p>Character Name</p>
             <input type="text" name="charname">
         </div>
         <div class="race">
             <p>Race</p>
-            <select name="charrace">
+            <select name="charrace" id="raceSelect">
                 <option value="" hidden>Select your Race</option>
-                <?php foreach ($races as $row): ?>
-                    <option value="<?= $row['race'] ?>">
-                        <?= $row['race'] ?>
-                    </option>
-                <?php endforeach; ?>
             </select>
         </div>
     </div>
     <div class="formsec">
         <div>
             <p>Class</p>
-            <select name="charclass">
-                <option value="" hidden>Select your class</option>
-                <?php foreach ($classes as $row): ?>
-                    <option value="<?= $row['class'] ?>">
-                        <?= $row['class'] ?>
-                    </option>
-                <?php endforeach; ?>
+            <select name="charclass" id="classSelect">
+                <option value="" hidden>Select your Class</option>
             </select>
         </div>
         <div>
@@ -62,6 +50,7 @@ if (!isset($_SESSION['user_id'])) {
         <div class="stat">
             <p>STR</p>
             <input type="number" name="stat1" min="1" max="20" placeholder="10" oninput="limitToMax(this)">
+            <small class="mod-display" id="mod-stat1"></small>
         </div>
         <div class="stat">
             <p>DEX</p>
@@ -96,4 +85,42 @@ if (!isset($_SESSION['user_id'])) {
             inputElement.value = maxValue;
         }
     }
+
+    function getoptions(input) {
+        const path = `../json/${input}.json`;
+
+        const selectId = `${input}Select`;
+        const selectElement = document.getElementById(selectId);
+
+        if (!selectElement) {
+            console.error(`Select element with id "${selectId}" not found.`);
+            return;
+        }
+
+        selectElement.length = 1;
+
+        fetch(path)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load JSON from ${path}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                for (const key in data) {
+                    const option = document.createElement("option");
+                    option.value = key;
+                    option.textContent = key.charAt(0).toUpperCase() + key.slice(1);
+                    selectElement.appendChild(option);
+                }
+            })
+            .catch(error => {
+                console.error("Error loading data:", error);
+            });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        getoptions("race");
+        getoptions("class");
+    });
 </script>

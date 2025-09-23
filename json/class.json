@@ -1,0 +1,86 @@
+{
+  "barbarian": {
+    "hitdie": "d12",
+    "savingthrows": ["strength", "constitution"],
+    "armorprof": ["light armor", "medium armor", "shields"],
+    "weaponprof": ["simple weapons", "martial weapons"],
+    "toolsprof": null
+  },
+  "bard": {
+    "hitdie": "d8",
+    "savingthrows": ["dexterity", "charisma"],
+    "armorprof": ["light armor"],
+    "weaponprof": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+    "toolsprof": "choice"
+  },
+  "cleric": {
+    "hitdie": "d8",
+    "savingthrows": ["wisdom", "charisma"],
+    "armorprof": ["light armor", "medium armor", "shields"],
+    "weaponprof": ["all simple weapons"],
+    "toolsprof": null
+  },
+  "druid": {
+    "hitdie": "d8",
+    "savingthrows": ["intelligence", "wisdom"],
+    "armorprof": ["light armor", "medium armor (nonmetal)", "shields (nonmetal)"],
+    "weaponprof": ["clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"],
+    "toolsprof": "Herbalism kit"
+  },
+  "fighter": {
+    "hitdie": "d10",
+    "savingthrows": ["strength", "constitution"],
+    "armorprof": ["light armor", "medium armor", "heavy armor", "shields"],
+    "weaponprof": ["simple weapons", "martial weapons"],
+    "toolsprof": null
+  },
+  "monk": {
+    "hitdie": "d8",
+    "savingthrows": ["strength", "dexterity"],
+    "armorprof": null,
+    "weaponprof": ["simple weapons", "shortswords"],
+    "toolsprof": "Three musical instruments of your choice"
+  },
+  "paladin": {
+    "hitdie": "d10",
+    "savingthrows": ["wisdom", "charisma"],
+    "armorprof": ["light armor", "medium armor", "heavy armor", "shields"],
+    "weaponprof": ["simple weapons", "martial weapons"],
+    "toolsprof": null
+  },
+  "ranger": {
+    "hitdie": "d10",
+    "savingthrows": ["strength", "dexterity"],
+    "armorprof": ["light armor", "medium armor", "shields"],
+    "weaponprof": ["simple weapons", "martial weapons"],
+    "toolsprof": null
+  },
+  "rogue": {
+    "hitdie": "d8",
+    "savingthrows": ["dexterity", "intelligence"],
+    "armorprof": ["light armor"],
+    "weaponprof": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+    "toolsprof": "Thieves’ tools"
+  },
+  "sorcerer": {
+    "hitdie": "d6",
+    "savingthrows": ["constitution", "charisma"],
+    "armorprof": null,
+    "weaponprof": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+    "toolsprof": null
+  },
+  "warlock": {
+    "hitdie": "d8",
+    "savingthrows": ["wisdom", "charisma"],
+    "armorprof": ["light armor"],
+    "weaponprof": ["simple weapons"],
+    "toolsprof": null
+  },
+  "wizard": {
+    "hitdie": "d6",
+    "savingthrows": ["intelligence", "wisdom"],
+    "armorprof": null,
+    "weaponprof": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+    "toolsprof": null
+  }
+}

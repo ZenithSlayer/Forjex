@@ -1,0 +1,47 @@
+{
+  "dwarf": {
+    "modifiers": [0, 0, 2, 0, 0, 0],
+    "speed": 25,
+    "languages": ["common", "dwarvish"]
+  },
+  "elf": {
+    "modifiers": [0, 2, 0, 0, 0, 0],
+    "speed": 30,
+    "languages": ["common", "elvish"]
+  },
+  "halfling": {
+    "modifiers": [0, 2, 0, 0, 0, 0],
+    "speed": 25,
+    "languages": ["common", "halfling"]
+  },
+  "human": {
+    "modifiers": [1, 1, 1, 1, 1, 1],
+    "speed": 30,
+    "languages": ["common", "+1"]
+  },
+  "dragonborn": {
+    "modifiers": [2, 0, 0, 0, 0, 1],
+    "speed": 30,
+    "languages": ["common", "draconic"]
+  },
+  "gnome": {
+    "modifiers": [0, 0, 0, 2, 0, 0],
+    "speed": 25,
+    "languages": ["common", "gnomish"]
+  },
+  "half-elf": {
+    "modifiers": [0, 0, 0, 0, 0, 2],
+    "speed": 30,
+    "languages": ["common", "elvish", "+1"]
+  },
+  "half-orc": {
+    "modifiers": [2, 0, 1, 0, 0, 0],
+    "speed": 30,
+    "languages": ["common", "orc"]
+  },
+  "tiefling": {
+    "modifiers": [0, 0, 0, 1, 0, 2],
+    "speed": 30,
+    "languages": ["common", "infernal"]
+  }
+}
