@@ -121,7 +121,7 @@ function profb(array $char): int
         </div>
     </div>
 
-    <div>
+    <div class="skills">
         <?php
         $savingThrows = [
             'Strength' => 'str_stat',
@@ -135,7 +135,8 @@ function profb(array $char): int
         $proficientStats = $classData[$char['charclass']]['saving throws'] ?? [];
         $proficientStats = array_map('strtolower', $proficientStats);
         ?>
-        <ul>
+        <p class="bigtitle">Saving throws</p>
+        <ul class="st">
             <?php foreach ($savingThrows as $name => $stat): ?>
                 <?php
                 $mod = (int) charStat($stat, 'mod');
@@ -145,14 +146,15 @@ function profb(array $char): int
                 ?>
                 <li>
                     <p><?= $name ?>:</p>
-                    <p><?= $mod ?></p>
+                    <p class="mod"><?= $mod ?></p>
                     <?php if (in_array(strtolower($name), $proficientStats, true)) : ?>
-                        <p>+</p>
+                        <p class="pos">+</p>
                     <?php endif; ?>
                 </li>
             <?php endforeach; ?>
         </ul>
 
+        <p class="bigtitle">Skills</p>
         <?php
         $skills = [
             'Acrobatics' => 'dex_stat',
@@ -175,7 +177,7 @@ function profb(array $char): int
             'Survival' => 'wis_stat'
         ];
         ?>
-        <ul>
+        <ul class="sl">
             <?php foreach ($skills as $skill => $stat): ?>
                 <li>
                     <p><?= $skill ?>:</p>

@@ -704,6 +704,73 @@ footer .link p:hover {
     box-shadow: black 0 2px 2px;
 }
 
+.charsheet .skills {
+    margin: auto;
+    width: 70vw;
+    background-color: #aaaaaa;
+    border-radius: 20px;
+    padding: 5px 30px;
+}
+
+.charsheet .bigtitle {
+    text-align: center;
+    font-size: xx-large;
+    margin: 15px 0;
+}
+
+.charsheet .st {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.charsheet .st li {
+    padding: 5px;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.charsheet .st li p {
+    height: fit-content;
+    margin: auto;
+}
+
+.charsheet .st li .pos {
+    color: green;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.charsheet .st li .mod {
+    font-size: 30px;
+}
+
+.charsheet .sl {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.charsheet .sl li {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    gap: 5px;
+}
+
+
 /* Error */
 
 .e404 {
