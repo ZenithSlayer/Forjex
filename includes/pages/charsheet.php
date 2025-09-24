@@ -51,6 +51,13 @@ function speed()
     global $charRaceSpeed;
     return $charRaceSpeed;
 }
+
+function profb(array $char): int
+{
+    $level = $char['charlv'];
+    if ($level < 1) return 0;
+    return intdiv($level - 1, 4) + 2;
+}
 ?>
 
 
