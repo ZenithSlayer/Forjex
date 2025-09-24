@@ -21,8 +21,9 @@ body {
 }
 
 main {
-    min-height: 67vh;
+    min-height: 68vh;
     margin: 10px 0;
+    align-content: center;
 }
 
 /* Nav */
@@ -142,10 +143,6 @@ nav .closebutton {
 }
 
 /* Header */
-
-header {
-    height: 200px;
-}
 
 header img {
     width: 100vw;
@@ -453,59 +450,106 @@ footer .link p:hover {
 
 /* Character creator */
 
+.createchar .error {
+    color: white;
+    width: fit-content;
+    margin: auto;
+    background-color: red;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
 .createchar {
     margin: auto;
+    gap: 10px;
+    width: fit-content;
+}
+
+.createchar form {
     height: fit-content;
     border-radius: 10px;
-    padding: 20px;
-    background-color: var(--light-orange);
+    background-color: rgb(211, 211, 211);
+    width: fit-content;
+    padding: 30px;
 }
 
-.createchar .formsec {
-    margin: 10px 0;
-    justify-content: space-around;
+.createchar form .formsec,
+.createchar form .charstats {
+    justify-content: space-between;
     display: flex;
     flex-direction: row;
-    gap: 10px;
 }
 
-.createchar .formsec p{
-    text-wrap: nowrap;
+.createchar .mods {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    position: absolute;
+    right: 1vw;
+    top: 10vh;
+}
+
+.createchar .mods .racestats {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    margin: auto;
+    gap: 5px;
+}
+
+.createchar .mods .racestats .stats {
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: wheat;
+}
+
+.createchar .mods .classstats {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(173, 217, 255);
+    gap: 5px;
+    padding: 10px;
+    width: 350px;
+}
+
+.createchar .mods .classstats .class {
     text-align: center;
 }
 
-.createchar .formsec input, .createchar .formsec select {
-    width: 100%;
+.createchar .mods .classstats .class .name {
+    background-color: antiquewhite;
+    margin: 0 0 5px 0;
 }
 
-.createchar .charstats {
-    justify-content: space-around;
+.createchar .mods .classstats .class .items {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 10px 0;
-    gap: 10px;
+    gap: 3px;
 }
 
-.createchar .charstats .stat {
+.createchar .mods .classstats .class .items p {
+    flex: 1 0;
+    text-wrap: nowrap;
+    padding: 4px;
     border-radius: 5px;
-    padding: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    background-color: var(--main-orange);
 }
 
-.createchar button {
-    padding: 10px;
-    display: flex;
-    margin: auto;
+.createchar .mods .classstats .class .items p:nth-child(odd) {
+    background-color: #e7e7e7;
+}
+
+.createchar .mods .classstats .class .items p:nth-child(even) {
+    background-color: #dbdbdb;
 }
 
 /* List of characters */
 
 .characters {
     margin: auto;
+    width: 95vw;
 }
 
 .characters .createchar {
@@ -581,21 +625,83 @@ footer .link p:hover {
 }
 
 .charsheet .charinfo {
+    width: fit-content;
+    margin: auto;
+    box-shadow: 0 0 10px rgb(158, 158, 158);
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #999;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 }
 
 .charsheet .charinfo .double {
+    background-color: #c2c2c2;
+    padding: 5px;
     width: fit-content;
     margin: auto;
     display: flex;
     flex-direction: row;
+    border-radius: 5px;
     gap: 10px;
+    box-shadow: #333 0 0 5px;
+    z-index: 2;
 }
-.charsheet .charinfo .double .single{
+
+.charsheet .charinfo .double:last-child {
+    border-radius: 0 0 5px 5px;
+    z-index: 1;
+}
+
+.charsheet .charinfo .double .single {
     display: flex;
     gap: 5px;
+}
+
+.charsheet .statlist {
+    margin: auto;
+    gap: 30px;
+    background-color: #aaaaaa;
+    width: fit-content;
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    flex-direction: row;
+}
+
+.charsheet .statlist .stat {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.charsheet .statlist .stat .mod {
+    background-color: white;
+    border-radius: 25%;
+    height: 50px;
+    width: 50px;
+    align-content: center;
+}
+
+.charsheet .statlist .stat .mod {
+    font-size: x-large;
+}
+
+.charsheet .statlist .stat .statnumber {
+    background-color: white;
+    width: fit-content;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    align-content: center;
+    transform: translateY(-5px);
+    border-radius: 0 0 5px 5px;
+}
+
+.charsheet .statlist .stat .statlabel {
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: black 0 2px 2px;
 }
 
 /* Error */
@@ -695,13 +801,19 @@ footer .link p:hover {
         padding: 0 20px;
     }
 
+    .characters {
+        margin: 0;
+    }
+
     .characters .createchar p {
         font-size: 25px;
     }
 
-    .createchar {
-        width: 100vw;
-        border-radius: 0;
+    .createchar .mods {
+        margin: 20px auto;
+        position: relative;
+        right: 0;
+        top: 0;
     }
 }
 

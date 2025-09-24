@@ -1,16 +1,15 @@
 <?php
 $user_id = $_SESSION['user_id'];
-$charname = trim($_POST['charname']);
+$charname = $_POST['charname'];
 $charclass = $_POST['charclass'];
 $charrace = $_POST['charrace'];
-$charlv = (int)$_POST['charlv'];
-
-$str_stat = (int)$_POST['stat1'];
-$dex_stat = (int)$_POST['stat2'];
-$con_stat = (int)$_POST['stat3'];
-$int_stat = (int)$_POST['stat4'];
-$wis_stat = (int)$_POST['stat5'];
-$cha_stat = (int)$_POST['stat6'];
+$charlv = $_POST['charlv'];
+$str_stat = $_POST['STR'];
+$dex_stat = $_POST['DEX'];
+$con_stat = $_POST['CON'];
+$int_stat = $_POST['INT'];
+$wis_stat = $_POST['WIS'];
+$cha_stat = $_POST['CHA'];
 
 $stmt = $pdo->prepare("SELECT COUNT(*) FROM chars WHERE charname = ? AND user_id = ?");
 $stmt->execute([$charname, $user_id]);
