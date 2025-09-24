@@ -21,6 +21,8 @@
         <?php
         if (isset($_GET['page'])) {
             $page = $_GET['page'];
+        } else {
+            $page = 'home';
         }
 
         $allowed_pages = ['home', 'about', 'contact', 'login' , 'error', 'createchar' , 'logout', 'view_character', 'sendchar', 'charlist', 'charsheet'];

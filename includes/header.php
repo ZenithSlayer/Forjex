@@ -1,5 +1,10 @@
 <?php
-$page = $_GET['page']; 
+if (isset($_GET['page'])) {
+    $page = $_GET['page'];
+} else {
+    $page = 'home';
+}
+
 
 if (file_exists("imgs/banner-$page.jpg")):
 ?>
