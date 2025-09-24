@@ -1,6 +1,7 @@
 <?php
 if (!isset($_SESSION['user_id'])) {
     header("Location: ?page=login&state=login");
+    exit;
 }
 
 $user_id = $_SESSION['user_id'];
@@ -33,7 +34,6 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </a>
         <?php endforeach; ?>
     </div>
-
     <div class="createchar">
         <?php if (count($characters) === 0): ?>
             <p>You have no characters created yet.</p>
