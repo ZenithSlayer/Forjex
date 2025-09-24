@@ -120,3 +120,67 @@ function profb(array $char): int
             <?= speed() ?>
         </div>
     </div>
+
+    <div>
+        <?php
+        $savingThrows = [
+            'Strength' => 'str_stat',
+            'Dexterity' => 'dex_stat',
+            'Constitution' => 'con_stat',
+            'Intelligence' => 'int_stat',
+            'Wisdom' => 'wis_stat',
+            'Charisma' => 'cha_stat'
+        ];
+
+        $proficientStats = $classData[$char['charclass']]['saving throws'] ?? [];
+        $proficientStats = array_map('strtolower', $proficientStats);
+        ?>
+        <ul>
+            <?php foreach ($savingThrows as $name => $stat): ?>
+                <?php
+                $mod = (int) charStat($stat, 'mod');
+                if (in_array(strtolower($name), $proficientStats, true)) {
+                    $mod += (int) profb($char);
+                }
+                ?>
+                <li>
+                    <p><?= $name ?>:</p>
+                    <p><?= $mod ?></p>
+                    <?php if (in_array(strtolower($name), $proficientStats, true)) : ?>
+                        <p>+</p>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+
+        <?php
+        $skills = [
+            'Acrobatics' => 'dex_stat',
+            'Animal Handling' => 'wis_stat',
+            'Arcana' => 'int_stat',
+            'Athletics' => 'str_stat',
+            'Deception' => 'cha_stat',
+            'History' => 'int_stat',
+            'Insight' => 'wis_stat',
+            'Intimidation' => 'cha_stat',
+            'Investigation' => 'int_stat',
+            'Medicine' => 'wis_stat',
+            'Nature' => 'int_stat',
+            'Perception' => 'wis_stat',
+            'Performance' => 'cha_stat',
+            'Persuasion' => 'cha_stat',
+            'Religion' => 'int_stat',
+            'Sleight of Hand' => 'dex_stat',
+            'Stealth' => 'dex_stat',
+            'Survival' => 'wis_stat'
+        ];
+        ?>
+        <ul>
+            <?php foreach ($skills as $skill => $stat): ?>
+                <li>
+                    <p><?= $skill ?>:</p>
+                    <p><?= charStat($stat, 'mod') ?></p>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
