@@ -2,211 +2,211 @@
   "dwarf": {
     "mod": [0, 0, 2, 0, 0, 0],
     "speed": 25,
-    "languages": ["common", "dwarvish"]
+    "lang": ["common", "dwarvish"]
   },
   "hill dwarf": {
     "mod": [0, 0, 2, 0, 1, 0],
     "speed": 25,
-    "languages": ["common", "dwarvish"]
+    "lang": ["common", "dwarvish"]
   },
   "mountain dwarf": {
     "mod": [0, 0, 2, 0, 2, 0],
     "speed": 25,
-    "languages": ["common", "dwarvish"]
+    "lang": ["common", "dwarvish"]
   },
   "elf": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "elvish"]
+    "lang": ["common", "elvish"]
   },
   "high elf": {
     "mod": [0, 2, 0, 1, 0, 0],
     "speed": 30,
-    "languages": ["common", "elvish", "+1"]
+    "lang": ["common", "elvish", "+1"]
   },
   "wood elf": {
     "mod": [0, 2, 0, 0, 0, 1],
     "speed": 35,
-    "languages": ["common", "elvish"]
+    "lang": ["common", "elvish"]
   },
   "dark elf (drow)": {
     "mod": [0, 2, 0, 0, 0, 1],
     "speed": 30,
-    "languages": ["common", "elvish", "undercommon"]
+    "lang": ["common", "elvish", "undercommon"]
   },
   "gnome": {
     "mod": [0, 0, 0, 2, 0, 0],
     "speed": 25,
-    "languages": ["common", "gnomish"]
+    "lang": ["common", "gnomish"]
   },
   "forest gnome": {
     "mod": [0, 0, 0, 2, 0, 0],
     "speed": 25,
-    "languages": ["common", "gnomish"]
+    "lang": ["common", "gnomish"]
   },
   "rock gnome": {
     "mod": [0, 0, 0, 2, 0, 0],
     "speed": 25,
-    "languages": ["common", "gnomish"]
+    "lang": ["common", "gnomish"]
   },
   "half-elf": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "elvish", "+1"]
+    "lang": ["common", "elvish", "+1"]
   },
   "half-orc": {
     "mod": [2, 0, 1, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "orc"]
+    "lang": ["common", "orc"]
   },
   "tiefling": {
     "mod": [0, 0, 0, 1, 0, 2],
     "speed": 30,
-    "languages": ["common", "infernal"]
+    "lang": ["common", "infernal"]
   },
   "halfling": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 25,
-    "languages": ["common", "halfling"]
+    "lang": ["common", "halfling"]
   },
   "lightfoot halfling": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 25,
-    "languages": ["common", "halfling"]
+    "lang": ["common", "halfling"]
   },
   "stout halfling": {
     "mod": [0, 2, 0, 0, 1, 0],
     "speed": 25,
-    "languages": ["common", "halfling"]
+    "lang": ["common", "halfling"]
   },
   "human": {
     "mod": [1, 1, 1, 1, 1, 1],
     "speed": 30,
-    "languages": ["common", "+1"]
+    "lang": ["common", "+1"]
   },
   "variant human": {
     "mod": [1, 1, 1, 1, 1, 1],
     "speed": 30,
-    "languages": ["common", "+1"]
+    "lang": ["common", "+1"]
   },
   "dragonborn": {
     "mod": [2, 0, 0, 0, 0, 1],
     "speed": 30,
-    "languages": ["common", "draconic"]
+    "lang": ["common", "draconic"]
   },
   "goliath": {
     "mod": [2, 0, 1, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "giant"]
+    "lang": ["common", "giant"]
   },
   "aasimar": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "celestial"]
+    "lang": ["common", "celestial"]
   },
   "protector aasimar": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "celestial"]
+    "lang": ["common", "celestial"]
   },
   "scourge aasimar": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "celestial"]
+    "lang": ["common", "celestial"]
   },
   "fallen aasimar": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "celestial"]
+    "lang": ["common", "celestial"]
   },
   "warforged": {
     "mod": [2, 0, 1, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "one other"]
+    "lang": ["common", "one other"]
   },
   "changeling": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "one other"]
+    "lang": ["common", "one other"]
   },
   "kalashtar": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "quori"]
+    "lang": ["common", "quori"]
   },
   "shifter": {
     "mod": [0, 0, 0, 0, 0, 2],
     "speed": 30,
-    "languages": ["common", "one other"]
+    "lang": ["common", "one other"]
   },
   "simic hybrid": {
     "mod": [0, 0, 1, 0, 1, 0],
     "speed": 30,
-    "languages": ["common", "elvish"]
+    "lang": ["common", "elvish"]
   },
   "vedalken": {
     "mod": [0, 0, 2, 0, 1, 0],
     "speed": 30,
-    "languages": ["common", "elvish"]
+    "lang": ["common", "elvish"]
   },
   "grung": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 25,
-    "languages": ["common", "grung"]
+    "lang": ["common", "grung"]
   },
   "hobgoblin": {
     "mod": [2, 0, 0, 1, 0, 0],
     "speed": 30,
-    "languages": ["common", "goblin"]
+    "lang": ["common", "goblin"]
   },
   "kobold": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "draconic"]
+    "lang": ["common", "draconic"]
   },
   "lizardfolk": {
     "mod": [2, 0, 1, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "draconic"]
+    "lang": ["common", "draconic"]
   },
   "tabaxi": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "elvish"]
+    "lang": ["common", "elvish"]
   },
   "triton": {
     "mod": [0, 0, 1, 0, 1, 0],
     "speed": 30,
-    "languages": ["common", "aquan"]
+    "lang": ["common", "aquan"]
   },
   "yuan-ti pureblood": {
     "mod": [0, 0, 0, 1, 0, 2],
     "speed": 30,
-    "languages": ["common", "abyssal"]
+    "lang": ["common", "abyssal"]
   },
   "githyanki": {
     "mod": [0, 0, 0, 1, 0, 2],
     "speed": 30,
-    "languages": ["common", "gith"]
+    "lang": ["common", "gith"]
   },
   "githzerai": {
     "mod": [0, 0, 0, 1, 0, 2],
     "speed": 30,
-    "languages": ["common", "gith"]
+    "lang": ["common", "gith"]
   },
   "eladrin": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 30,
-    "languages": ["common", "elvish"]
+    "lang": ["common", "elvish"]
   },
   "hobbit": {
     "mod": [0, 2, 0, 0, 0, 0],
     "speed": 25,
-    "languages": ["common", "halfling"]
+    "lang": ["common", "halfling"]
   },
   "gith": {
     "mod": [0, 0, 0, 1, 0, 2],
     "speed": 30,
-    "languages": ["common", "gith"]
+    "lang": ["common", "gith"]
   }
 }
