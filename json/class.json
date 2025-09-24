@@ -1,86 +1,86 @@
 {
   "barbarian": {
     "hitdie": "d12",
-    "savingthrows": ["strength", "constitution"],
-    "armorprof": ["light armor", "medium armor", "shields"],
-    "weaponprof": ["simple weapons", "martial weapons"],
-    "toolsprof": null
+    "saving throws": ["strength", "constitution"],
+    "armor proficience": ["light armor", "medium armor", "shields"],
+    "weapon proficience": ["simple weapons", "martial weapons"],
+    "tools proficience": null
   },
   "bard": {
     "hitdie": "d8",
-    "savingthrows": ["dexterity", "charisma"],
-    "armorprof": ["light armor"],
-    "weaponprof": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
-    "toolsprof": "choice"
+    "saving throws": ["dexterity", "charisma"],
+    "armor proficience": ["light armor"],
+    "weapon proficience": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+    "tools proficience": "choice"
   },
   "cleric": {
     "hitdie": "d8",
-    "savingthrows": ["wisdom", "charisma"],
-    "armorprof": ["light armor", "medium armor", "shields"],
-    "weaponprof": ["all simple weapons"],
-    "toolsprof": null
+    "saving throws": ["wisdom", "charisma"],
+    "armor proficience": ["light armor", "medium armor", "shields"],
+    "weapon proficience": ["all simple weapons"],
+    "tools proficience": null
   },
   "druid": {
     "hitdie": "d8",
-    "savingthrows": ["intelligence", "wisdom"],
-    "armorprof": ["light armor", "medium armor (nonmetal)", "shields (nonmetal)"],
-    "weaponprof": ["clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"],
-    "toolsprof": "Herbalism kit"
+    "saving throws": ["intelligence", "wisdom"],
+    "armor proficience": ["light armor", "medium armor (nonmetal)", "shields (nonmetal)"],
+    "weapon proficience": ["clubs", "daggers", "darts", "javelins", "maces", "quarterstaffs", "scimitars", "sickles", "slings", "spears"],
+    "tools proficience": "Herbalism kit"
   },
   "fighter": {
     "hitdie": "d10",
-    "savingthrows": ["strength", "constitution"],
-    "armorprof": ["light armor", "medium armor", "heavy armor", "shields"],
-    "weaponprof": ["simple weapons", "martial weapons"],
-    "toolsprof": null
+    "saving throws": ["strength", "constitution"],
+    "armor proficience": ["light armor", "medium armor", "heavy armor", "shields"],
+    "weapon proficience": ["simple weapons", "martial weapons"],
+    "tools proficience": null
   },
   "monk": {
     "hitdie": "d8",
-    "savingthrows": ["strength", "dexterity"],
-    "armorprof": null,
-    "weaponprof": ["simple weapons", "shortswords"],
-    "toolsprof": "Three musical instruments of your choice"
+    "saving throws": ["strength", "dexterity"],
+    "armor proficience": null,
+    "weapon proficience": ["simple weapons", "shortswords"],
+    "tools proficience": "choice"
   },
   "paladin": {
     "hitdie": "d10",
-    "savingthrows": ["wisdom", "charisma"],
-    "armorprof": ["light armor", "medium armor", "heavy armor", "shields"],
-    "weaponprof": ["simple weapons", "martial weapons"],
-    "toolsprof": null
+    "saving throws": ["wisdom", "charisma"],
+    "armor proficience": ["light armor", "medium armor", "heavy armor", "shields"],
+    "weapon proficience": ["simple weapons", "martial weapons"],
+    "tools proficience": null
   },
   "ranger": {
     "hitdie": "d10",
-    "savingthrows": ["strength", "dexterity"],
-    "armorprof": ["light armor", "medium armor", "shields"],
-    "weaponprof": ["simple weapons", "martial weapons"],
-    "toolsprof": null
+    "saving throws": ["strength", "dexterity"],
+    "armor proficience": ["light armor", "medium armor", "shields"],
+    "weapon proficience": ["simple weapons", "martial weapons"],
+    "tools proficience": null
   },
   "rogue": {
     "hitdie": "d8",
-    "savingthrows": ["dexterity", "intelligence"],
-    "armorprof": ["light armor"],
-    "weaponprof": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
-    "toolsprof": "Thieves’ tools"
+    "saving throws": ["dexterity", "intelligence"],
+    "armor proficience": ["light armor"],
+    "weapon proficience": ["simple weapons", "hand crossbows", "longswords", "rapiers", "shortswords"],
+    "tools proficience": "Thieves’ tools"
   },
   "sorcerer": {
     "hitdie": "d6",
-    "savingthrows": ["constitution", "charisma"],
-    "armorprof": null,
-    "weaponprof": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
-    "toolsprof": null
+    "saving throws": ["constitution", "charisma"],
+    "armor proficience": null,
+    "weapon proficience": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+    "tools proficience": null
   },
   "warlock": {
     "hitdie": "d8",
-    "savingthrows": ["wisdom", "charisma"],
-    "armorprof": ["light armor"],
-    "weaponprof": ["simple weapons"],
-    "toolsprof": null
+    "saving throws": ["wisdom", "charisma"],
+    "armor proficience": ["light armor"],
+    "weapon proficience": ["simple weapons"],
+    "tools proficience": null
   },
   "wizard": {
     "hitdie": "d6",
-    "savingthrows": ["intelligence", "wisdom"],
-    "armorprof": null,
-    "weaponprof": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
-    "toolsprof": null
+    "saving throws": ["intelligence", "wisdom"],
+    "armor proficience": null,
+    "weapon proficience": ["daggers", "darts", "slings", "quarterstaffs", "light crossbows"],
+    "tools proficience": null
   }
 }
