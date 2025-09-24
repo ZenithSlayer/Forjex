@@ -23,12 +23,12 @@ $characters = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     - <?= $char['charrace'] ?>)
                 </p>
                 <p class="charstats">
-                    STR <?= (int)$char['str_stat'] ?>,
-                    DEX <?= (int)$char['dex_stat'] ?>,
-                    CON <?= (int)$char['con_stat'] ?>,
-                    INT <?= (int)$char['int_stat'] ?>,
-                    WIS <?= (int)$char['wis_stat'] ?>,
-                    CHA <?= (int)$char['cha_stat'] ?>
+                    STR <?= $char['str_stat'] ?>,
+                    DEX <?= $char['dex_stat'] ?>,
+                    CON <?= $char['con_stat'] ?>,
+                    INT <?= $char['int_stat'] ?>,
+                    WIS <?= $char['wis_stat'] ?>,
+                    CHA <?= $char['cha_stat'] ?>
                 </p>
             </a>
         <?php endforeach; ?>
