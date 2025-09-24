@@ -11,6 +11,11 @@ $stmt = $pdo->prepare("SELECT * FROM chars WHERE user_id = ? AND char_id = ?");
 $stmt->execute([$user_id, $char_id]);
 $char = $stmt->fetch(PDO::FETCH_ASSOC);
 
+if (!$char) {
+    header("Location: ?page=404");
+    exit;
+}
+
 $raceData = json_decode(file_get_contents("./json/race.json"), true);
 $classData = json_decode(file_get_contents("./json/class.json"), true);
 
