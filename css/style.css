@@ -620,10 +620,6 @@ footer .link p:hover {
 
 /* Charsheet */
 
-.charsheet {
-    background-color: aqua;
-}
-
 .charsheet .charinfo {
     width: fit-content;
     margin: auto;
@@ -658,148 +654,119 @@ footer .link p:hover {
     gap: 5px;
 }
 
-.charsheet .statlist {
-    margin: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    background-color: #aaaaaa;
+.charsheet .allstats .allmods {
+    display: flex;
+    flex-direction: column;
     width: fit-content;
-    display: flex;
-    padding: 10px;
-    border-radius: 5px;
-    flex-direction: row;
 }
 
-.charsheet .statlist .stat {
+.charsheet .allstats .allmods .sidebarlabel {
     text-align: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.charsheet .statlist .stat .mod {
-    background-color: white;
-    border-radius: 25%;
-    height: 50px;
-    width: 50px;
-    align-content: center;
-}
-
-.charsheet .statlist .stat .mod {
-    font-size: x-large;
-}
-
-.charsheet .statlist .stat .statnumber {
-    background-color: white;
-    width: fit-content;
-    margin: auto;
-    width: 30px;
-    height: 30px;
-    align-content: center;
-    transform: translateY(-5px);
-    border-radius: 0 0 5px 5px;
-}
-
-.charsheet .statlist .stat .statlabel {
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: black 0 2px 2px;
-}
-
-.charsheet .achpsp {
-    margin: 40px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: #333;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-.charsheet .achpsp .stat {
-    width: 150px;
-    background-color: #999;
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.charsheet .achpsp .stat p {
-    background-color: white;
-    text-align: center;
-}
-
-.charsheet .achpsp .stat p:first-child {
-    font-size: xx-large;
-    
-}
-
-.charsheet .achpsp .stat p:last-child {
-    font-size: large;
-}
-
-.charsheet .skills {
-    margin: auto;
-    width: 70vw;
-    background-color: #aaaaaa;
-    border-radius: 20px;
-    padding: 5px 30px;
-}
-
-.charsheet .bigtitle {
-    text-align: center;
-    font-size: xx-large;
-    margin: 15px 0;
-}
-
-.charsheet .st {
-    flex-wrap: wrap;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-}
-
-.charsheet .st li {
-    padding: 5px;
-    border-radius: 5px;
-    width: fit-content;
-    background-color: aliceblue;
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
-}
-
-.charsheet .st li p {
-    height: fit-content;
-    margin: auto;
-}
-
-.charsheet .st li .pos {
-    color: green;
-    font-weight: 900;
-    font-size: x-large;
-}
-
-.charsheet .st li .mod {
     font-size: 30px;
+    font-weight: 600;
 }
 
-.charsheet .sl {
-    margin: auto;
-    justify-content: center;
+.charsheet .allstats .allmods .savingthrow {
+    max-width: 450px;
+    margin: 10px 0 10px 10px;
+    width: fit-content;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
     gap: 10px;
 }
 
-.charsheet .sl li {
-    padding: 5px;
-    border-radius: 5px;
-    background-color: aliceblue;
+.charsheet .allstats .allmods .savingthrow .savemod {
+    background-color: #cfcfcf;
+    padding: 10px;
     display: flex;
     flex-direction: row;
-    width: fit-content;
+    border-radius: 10px;
     gap: 5px;
+    justify-content: center;
+    flex: 1 0 0;
+}
+
+.charsheet .allstats .allmods .savingthrow .savemod p {
+    margin: auto;
+    height: fit-content;
+}
+
+.charsheet .allstats .allmods .savingthrow .savemod .mod {
+    font-size: 35px;
+}
+
+.charsheet .allstats .allmods .savingthrow .savemod .pos {
+    color: rgb(0, 204, 0);
+    font-size: 35px;
+    font-weight: 900;
+}
+
+.charsheet .allstats .allmods .skills {
+        display: flex;
+    flex-direction: row;
+}
+
+.charsheet .allstats .allmods .skills .modifiers {
+    background-color: #999999;
+    padding: 15px 10px 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+}
+
+.charsheet .allstats .allmods .skills .modifiers .stat {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #c5c5c5;
+    ;
+    border-radius: 0 15px 15px 0;
+}
+
+.charsheet .allstats .allmods .skills .modifiers .stat .statlabel {
+    background-color: #ffffff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 50%;
+}
+
+.charsheet .allstats .allmods .skills .modifiers .stat .mod {
+    background-color: white;
+    border-radius: 20px;
+    font-size: 35px;
+}
+
+.charsheet .allstats .allmods .skills .modifiers .stat .statnumber {
+    background-color: white;
+    border-radius: 30px;
+    font-size: 15px;
+}
+
+.charsheet .allstats .allmods .skills .skillcheck {
+    justify-content: center;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.charsheet .allstats .allmods .skills .skillcheck div {
+    font-size: 18px;
+    background-color: rgb(212, 212, 212);
+    border-radius: 0 25px 25px 0;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    box-shadow: #707070 5px 5px 4px;
+    padding: 10px 20px 10px 10px;
+    justify-content: center;
 }
 
 
@@ -914,6 +881,15 @@ footer .link p:hover {
         right: 0;
         top: 0;
     }
+
+    .charsheet .st li p {
+        font-size: 13px;
+    }
+
+    .charsheet .st li .mod {
+        font-size: 25px;
+    }
+
 }
 
 @media screen and (max-width: 1200px) {
