@@ -654,6 +654,13 @@ footer .link p:hover {
     gap: 5px;
 }
 
+.charsheet .allstats {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
 .charsheet .allstats .allmods {
     display: flex;
     flex-direction: column;
@@ -667,7 +674,7 @@ footer .link p:hover {
 }
 
 .charsheet .allstats .allmods .savingthrow {
-    max-width: 450px;
+    max-width: 320px;
     margin: 10px 0 10px 10px;
     width: fit-content;
     display: flex;
@@ -704,7 +711,7 @@ footer .link p:hover {
 }
 
 .charsheet .allstats .allmods .skills {
-        display: flex;
+    display: flex;
     flex-direction: row;
 }
 
@@ -769,6 +776,40 @@ footer .link p:hover {
     justify-content: center;
 }
 
+.charsheet .combatinfo {
+    padding: 20px;
+    background-color: #333;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-radius: 10px;
+}
+
+.charsheet .combatinfo .stat {
+    background-color: #707070;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.charsheet .combatinfo .stat p:first-child {
+    font-size: 25px;
+    padding: 10px;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+.charsheet .combatinfo .stat p:last-child {
+    background-color: wheat;
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-size: 20px;
+}
 
 /* Error */
 

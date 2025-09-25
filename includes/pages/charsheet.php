@@ -184,14 +184,14 @@ function profb(array $char): int
             </div>
         </div>
 
-        <div class="achpsp">
+        <div class="combatinfo">
             <div class="stat">
                 <p><?= ac() ?></p>
                 <p>AC</p>
             </div>
             <div class="stat">
-                <p><?= hp() ?></p>
-                <p>Total Health</p>
+                <p><?= charStat('dex_stat', 'mod') ?></p>
+                <p>Initiative</p>
             </div>
             <div class="stat">
                 <p><?= speed() ?></p>
