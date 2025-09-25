@@ -553,7 +553,7 @@ footer .link p:hover {
 }
 
 .characters .createchar {
-    margin: 20px 0;
+    margin: 20px auto;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -644,13 +644,13 @@ footer .link p:hover {
     flex-direction: row;
     border-radius: 5px;
     gap: 10px;
-    box-shadow: #333 0 0 5px;
-    z-index: 2;
+    text-wrap: nowrap;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .charsheet .charinfo .double:last-child {
     border-radius: 0 0 5px 5px;
-    z-index: 1;
 }
 
 .charsheet .charinfo .double .single {
@@ -660,6 +660,8 @@ footer .link p:hover {
 
 .charsheet .statlist {
     margin: auto;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
     background-color: #aaaaaa;
     width: fit-content;
@@ -702,6 +704,36 @@ footer .link p:hover {
     border-radius: 10px;
     background-color: white;
     box-shadow: black 0 2px 2px;
+}
+
+.charsheet .achpsp {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #333;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.charsheet .achpsp .stat {
+    width: 150px;
+    background-color: #999;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.charsheet .achpsp .stat p {
+    background-color: white;
+    text-align: center;
+}
+
+.charsheet .achpsp .stat p:first-child {
+    font-size: xx-large;
+    
+}
+
+.charsheet .achpsp .stat p:last-child {
+    font-size: large;
 }
 
 .charsheet .skills {

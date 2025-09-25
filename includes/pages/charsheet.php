@@ -30,7 +30,8 @@ function charStat($stat, $type = 'raw')
     global $char, $charRaceMods;
     $statsIndex = ['str_stat' => 0, 'dex_stat' => 1, 'con_stat' => 2, 'int_stat' => 3, 'wis_stat' => 4, 'cha_stat' => 5];
     $value = $char[$stat] + $charRaceMods[$statsIndex[$stat]];
-    if ($type === 'mod') return floor(($value - 10) / 2);
+    if ($type === 'mod')
+        return floor(($value - 10) / 2);
     return $value;
 }
 
@@ -60,11 +61,11 @@ function speed()
 function profb(array $char): int
 {
     $level = $char['charlv'];
-    if ($level < 1) return 0;
+    if ($level < 1)
+        return 0;
     return intdiv($level - 1, 4) + 2;
 }
 ?>
-
 
 <div class="charsheet">
     <div class="charinfo">
@@ -109,15 +110,18 @@ function profb(array $char): int
         <?php endforeach; ?>
     </div>
 
-    <div class="Achpsp">
+    <div class="achpsp">
         <div class="stat">
             <p><?= hp() ?></p>
+            <p>Total Health</p>
         </div>
         <div class="stat">
             <p><?= ac() ?></p>
+            <p>AC</p>
         </div>
-        <div class="speed">
-            <?= speed() ?>
+        <div class="stat">
+            <p><?= speed() ?></p>
+            <p>Sreed</p>
         </div>
     </div>
 
@@ -147,7 +151,7 @@ function profb(array $char): int
                 <li>
                     <p><?= $name ?>:</p>
                     <p class="mod"><?= $mod ?></p>
-                    <?php if (in_array(strtolower($name), $proficientStats, true)) : ?>
+                    <?php if (in_array(strtolower($name), $proficientStats, true)): ?>
                         <p class="pos">+</p>
                     <?php endif; ?>
                 </li>
