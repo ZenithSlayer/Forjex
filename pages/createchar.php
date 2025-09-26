@@ -54,7 +54,7 @@ if (!isset($_SESSION['user_id'])) {
             foreach ($stats as $stat) { ?>
                 <div class="stat">
                     <p><?= $stat ?></p>
-                    <input required type="number" name="<?= $stat ?>" id="<?= $stat ?>" min="1" max="20" value="10" oninput="limitnum(this)">
+                    <input required type="number" name="<?= $stat ?>" id="<?= $stat ?>" min="1" max="20" placeholder="10" oninput="limitnum(this)">
                 </div>
             <?php } ?>
         </div>
@@ -213,12 +213,20 @@ if (!isset($_SESSION['user_id'])) {
         select.addEventListener("wheel", e => {
             e.preventDefault();
             const options = Array.from(select.options);
-            const currentIndex = select.selectedIndex;
+            let currentIndex = select.selectedIndex;
+
+            function getNextIndex(dir) {
+                let i = currentIndex;
+                do {
+                    i = (i + dir + options.length) % options.length;
+                } while (options[i].disabled || options[i].hidden);
+                return i;
+            }
 
             if (e.deltaY < 0) {
-                select.selectedIndex = (currentIndex - 1 + options.length) % options.length;
+                select.selectedIndex = getNextIndex(-1);
             } else {
-                select.selectedIndex = (currentIndex + 1) % options.length;
+                select.selectedIndex = getNextIndex(1);
             }
 
             select.dispatchEvent(new Event("change"));

@@ -58,6 +58,21 @@ function speed()
     return $charRaceSpeed;
 }
 
+function itemprof($type, $classData, $char)
+{
+    $key = $type . ' proficience';
+    $items = $classData[$char['charclass']][$key] ?? [];
+    if ($items) {
+        foreach ((array)$items as $item) {
+            echo "<p>$item</p>";
+        }
+    } else {
+        echo "<p>None</p>";
+    }
+}
+
+
+
 // Profbonus
 
 function profb(array $char): int
@@ -69,7 +84,13 @@ function profb(array $char): int
 }
 ?>
 
+
+
 <div class="charsheet">
+    <form method="post" action="?page=deletechar" onsubmit="return confirm('Are you sure you want to delete this character?');">
+        <input type="hidden" name="char_id" value="<?= $char['char_id'] ?>">
+        <button type="submit">Delete Character</button>
+    </form>
     <div class="charinfo">
         <div class="double">
             <div class="single">
@@ -182,20 +203,46 @@ function profb(array $char): int
                     <?php endforeach; ?>
                 </div>
             </div>
+
+            <div class="passivep">
+                <p>Passive perception</p>
+                <p><?= charStat('wis_stat', 'mod')+10 ?></p>
+            </div>
         </div>
 
         <div class="combatinfo">
-            <div class="stat">
-                <p><?= ac() ?></p>
-                <p>AC</p>
+            <div class="section">
+                <div class="stat">
+                    <p><?= ac() ?></p>
+                    <p>AC</p>
+                </div>
+                <div class="stat">
+                    <p><?= charStat('dex_stat', 'mod') ?></p>
+                    <p>Initiative</p>
+                </div>
+                <div class="stat">
+                    <p><?= speed() ?></p>
+                    <p>Speed</p>
+                </div>
             </div>
-            <div class="stat">
-                <p><?= charStat('dex_stat', 'mod') ?></p>
-                <p>Initiative</p>
+            <div class="hp">
+                <p>Max Hp</p>
+                <p><?= hp() ?></p>
             </div>
-            <div class="stat">
-                <p><?= speed() ?></p>
-                <p>Speed</p>
+        </div>
+        <div class="prof">
+            <p class="title">Proficiences</p>
+            <p class="type">Armor</p>
+            <div class="item">
+                <?php itemprof('armor', $classData, $char); ?>
+            </div>
+            <p class="type">Weapons</p>
+            <div class="item">
+                <?php itemprof('weapon', $classData, $char); ?>
+            </div>
+            <p class="type">Tools</p>
+            <div class="item">
+                <?php itemprof('tools', $classData, $char); ?>
             </div>
         </div>
     </div>

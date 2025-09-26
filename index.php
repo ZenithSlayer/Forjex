@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
     <title>Forjex</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 
 <body>
@@ -25,13 +25,13 @@
             $page = 'home';
         }
 
-        $allowed_pages = ['home', 'about', 'contact', 'login' , 'error', 'createchar' , 'logout', 'view_character', 'sendchar', 'charlist', 'charsheet'];
+        $allowed_pages = ['home', 'about', 'contact', 'login' , 'error', 'createchar' , 'logout', 'view_character', 'sendchar', 'charlist', 'charsheet', 'deletechar'];
 
         if (!in_array($page, $allowed_pages)) {
             $page = 'error';
         }
 
-        include "includes/pages/" . $page . ".php";
+        include "pages/" . $page . ".php";
             ?>
     </main>
 
